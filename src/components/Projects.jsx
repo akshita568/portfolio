@@ -10,21 +10,21 @@ export default function Projects() {
       shortDesc: "A desktop-based enterprise compliance engine built with FastAPI, React, Electron, and SQLite.",
       fullDesc: "Built a desktop-based enterprise compliance engine with a FastAPI backend, React/Electron frontend, and SQLite persistence. Integrated Google Gemini to extract dependency and compatibility rules from vendor documentation and store them in a searchable knowledge base. Developed automated endpoint scanning and compatibility visualization to identify compliance issues across application dependencies.",
       image: "/projects/compactIQ.png",
-      github: "https://github.com/yourusername/compactiq"
+      github: "https://github.com/akshita568/compactIQ"
     },
     {
       title: "Silent Strokes",
       shortDesc: "A full-stack art portfolio and studio management platform using React and Firebase.",
       fullDesc: "Built a full-stack art portfolio and studio management platform using React, Vite, Firebase Authentication, and Cloud Firestore. Implemented protected admin routes and real-time commission management using Firebase Authentication and Firestore. Designed a responsive interface with interactive galleries and storytelling-driven user experience using Tailwind CSS.",
       image: "/art/art1.png",
-      github: "https://github.com/yourusername/silent-strokes"
+      github: "https://github.com/akshita568/silentStrokes"
     },
     {
       title: "Network Security Threat Detection Platform",
       shortDesc: "An end-to-end phishing URL detection pipeline covering MongoDB and Scikit-Learn.",
       fullDesc: "Developed an end-to-end phishing URL detection pipeline covering MongoDB ingestion, preprocessing and model training. Built reusable configuration, logging, exception handling, and data ingestion modules to improve pipeline reliability and maintainability. Containerized the ML workflow using Docker for seamless deployment.",
       image: "/projects/networksec.png",
-      github: "https://github.com/yourusername/threat-detection"
+      github: "https://github.com/akshita568/network_security_threat_detection"
     }
   ];
 

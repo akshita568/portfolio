@@ -57,10 +57,10 @@ export default function Home() {
         <div className="pink-tape-banner">
           <img src="/art/tape.png" alt="Pink Tape Background" className="pink-tape-bg" />
           <div className="artworks-overlap-group grid-4-art">
-            <div className="artwork-polaroid art-piece-1"><img src="/photos/artwork1.png" alt="Art 1" /></div>
-            <div className="artwork-polaroid art-piece-2"><img src="/photos/artwork2.png" alt="Art 2" /></div>
-            <div className="artwork-polaroid art-piece-3"><img src="/photos/artwork3.png" alt="Art 3" /></div>
-            <div className="artwork-polaroid art-piece-4"><img src="/photos/artwork4.png" alt="Art 4" /></div>
+            <div className="artwork-polaroid art-piece-1"><img src="/art/art1.png" alt="Art 1" /></div>
+            <div className="artwork-polaroid art-piece-2"><img src="/art/art2.png" alt="Art 2" /></div>
+            <div className="artwork-polaroid art-piece-3"><img src="/art/art3.png" alt="Art 3" /></div>
+            <div className="artwork-polaroid art-piece-4"><img src="/art/art4.png" alt="Art 4" /></div>
           </div>
         </div>
 
@@ -102,10 +102,10 @@ export default function Home() {
         <div className="pink-tape-banner">
           <img src="/art/tape.png" alt="Pink Tape Background" className="pink-tape-bg" />
           <div className="artworks-overlap-group grid-4-art">
-            <div className="artwork-polaroid photo-piece-1"><img src="/photos/photography1.png" alt="Photo 1" /></div>
-            <div className="artwork-polaroid photo-piece-2"><img src="/photos/photography2.png" alt="Photo 2" /></div>
-            <div className="artwork-polaroid photo-piece-3"><img src="/photos/photography3.png" alt="Photo 3" /></div>
-            <div className="artwork-polaroid photo-piece-4"><img src="/photos/photography4.png" alt="Photo 4" /></div>
+            <div className="artwork-polaroid photo-piece-1"><img src="/photography/photo1.png" alt="Photo 1" /></div>
+            <div className="artwork-polaroid photo-piece-2"><img src="/photography/photo2.png" alt="Photo 2" /></div>
+            <div className="artwork-polaroid photo-piece-3"><img src="/photography/photo3.png" alt="Photo 3" /></div>
+            <div className="artwork-polaroid photo-piece-4"><img src="/photography/photo4.png" alt="Photo 4" /></div>
           </div>
         </div>
       </section>

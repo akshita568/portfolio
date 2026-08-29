@@ -29,7 +29,6 @@ html, body {
   max-width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
-  border: none !important;
   text-align: left;
 }
 
@@ -43,18 +42,17 @@ html, body {
   flex-direction: column;
 }
 
-/* ==========================================
-   GLOBAL UTILITIES
-   ========================================== */
+/* Global Utilities */
 .magazine-cutout {
   background: var(--text-dark);
   color: var(--text-light);
   padding: 4px 12px;
   display: inline-block;
-  font-family: var(--font-sans);
   font-weight: 900;
   font-size: 1.8rem;
   letter-spacing: -1px;
+  border: 2px solid #111;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
 }
 
 .serif-solid {
@@ -64,16 +62,7 @@ html, body {
   text-transform: uppercase;
   line-height: 0.9;
   font-size: 4.5rem !important;
-}
-
-.pill-badge {
-  border: 2px solid white;
-  border-radius: 50px;
-  padding: 6px 18px;
-  font-family: var(--font-sans);
-  font-weight: bold;
-  font-size: 0.85rem;
-  display: inline-block;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
 .collage-star {
@@ -85,25 +74,21 @@ html, body {
   z-index: 10;
 }
 
-/* ==========================================
-   NAVBAR
-   ========================================== */
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 1rem 5%;
+  padding: 0.8rem 5%;
   background: #111;
   border-bottom: 2px solid rgba(255,255,255,0.1);
-  font-family: var(--font-sans);
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: bold;
   letter-spacing: 1px;
-  position: static;
+  position: sticky;
   top: 0;
   z-index: 1000;
 }
-
 
 .nav-links { 
   display: flex; 
@@ -124,21 +109,19 @@ html, body {
 }
 
 section {
-  padding: 2rem 3%; 
+  padding: 1.8rem 3%; 
   position: relative;
-  min-height: 50vh; 
+  min-height: 40vh; 
   display: flex;
   align-items: center;
   border-bottom: 2px dashed rgba(255,255,255,0.3);
 }
 
-/* ==========================================
-   HOME / HERO SECTION
-   ========================================== */
+/* Home / Hero Section */
 .home-section {
   justify-content: flex-start; 
   gap: 2rem;
-  padding-top: 3rem;
+  padding-top: 2rem;
   padding-left: 1%;
 }
 
@@ -146,7 +129,6 @@ section {
   position: relative;
   display: flex;
   flex-direction: row; 
-  flex-wrap: nowrap; 
   align-items: center;
   gap: 1.5rem; 
 }
@@ -177,7 +159,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 1.5rem;
+  gap: 1rem;
   max-width: 580px;
   position: relative;
   z-index: 2;
@@ -194,30 +176,30 @@ section {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  color: var(--text-dark);
-  padding: 25px;
+  padding: 18px;
   border-radius: 6px;
   border: 2px dashed #111;
+  box-shadow: 4px 6px 0px rgba(0, 0, 0, 0.25);
 }
 
 .hero-about .about-text-p {
-  color: #f5f3f3;
+  color: #fefafc;
+  text-shadow: none;
 }
 
 .about-text-p {
-  font-size: 1rem;
-  line-height: 1.5; 
+  font-family: 'Space Mono', monospace;
+  font-size: 1.0rem;
+  line-height: 1.4; 
   margin-bottom: 0; 
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .camera-roll-vertical {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  flex-shrink: 0; 
+  gap: 10px;
   justify-content: center;
-  padding: 12px;
+  padding: 10px;
   border: 2px dotted #111;
   background: rgba(0, 0, 0, 0.03);
   border-radius: 6px;
@@ -228,15 +210,15 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-shrink: 0; 
 }
 
 .polaroid-mini {
-  width: 140px; 
-  height: 165px;
+  width: 130px; 
+  height: 155px;
   background: white;
-  padding: 8px 8px 25px 8px;
-  box-shadow: 3px 4px 10px rgba(0,0,0,0.15);
+  padding: 6px 6px 20px 6px;
+  border: 2px solid #111 !important;
+  box-shadow: 5px 6px 0px rgba(0, 0, 0, 0.3) !important;
 }
 
 .polaroid-mini img {
@@ -250,33 +232,69 @@ section {
 .polaroid-mini:nth-child(2) { transform: rotate(-2deg); }
 .polaroid-mini:nth-child(3) { transform: rotate(2deg); }
 
-/* PROJECTS / CROSSWORD SECTION */
+/* Nav Callout Arrows */
+.nav-callouts-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.3rem;
+  position: relative;
+  padding: 0 10px;
+}
+
+.anno-projects-callout, .anno-resume-callout {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  font-family: var(--font-script);
+  color: white;
+  z-index: 10;
+  display: flex;
+  white-space: nowrap;
+}
+
+.arrow-svg {
+  stroke: white;
+  stroke-width: 2.5;
+  fill: none;
+  overflow: visible;
+}
+
+.arrow-callout-1, .arrow-callout-2 {
+  width: 35px;
+  height: 40px;
+  margin-top: 2px;
+  transform: scaleY(-1);
+}
+
+/* Crossword / Projects Section */
 .projects-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
-  padding: 4rem 5%;
+  gap: 3rem;
+  padding: 2.5rem 5%;
 }
 
 .contents-sidebar {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.2rem;
 }
 
 .vertical-title {
   font-family: var(--font-serif);
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: rgba(255, 255, 255, 0.4);
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  letter-spacing: 8px;
+  letter-spacing: 6px;
 }
 
 .vertical-line {
   width: 2px;
-  height: 300px;
+  height: 250px;
   background-color: white;
   position: relative;
 }
@@ -297,7 +315,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 420px;
+  width: 360px;
 }
 
 .projects-cutout {
@@ -310,24 +328,23 @@ section {
 
 .projects-star {
   bottom: 10px;
-  left: -30px;
+  left: -25px;
   transform: rotate(-25deg);
-  width: 75px;
-  height: 75px;
+  width: 65px;
+  height: 65px;
   z-index: 6;
 }
 
 .crossword-container {
   position: relative;
-  padding: 40px 60px;
+  padding: 20px 40px;
 }
 
 .crossword-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 22px 28px;
-  font-family: var(--font-sans);
-  font-size: 3.8rem;
+  gap: 16px 22px;
+  font-size: 3.2rem;
   font-weight: bold;
   text-align: center;
   text-transform: lowercase;
@@ -355,92 +372,114 @@ section {
 .annotation {
   position: absolute;
   font-family: var(--font-script);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: white;
   z-index: 10;
   display: flex;
   white-space: nowrap;
 }
 
-.arrow-svg {
-  stroke: white;
-  stroke-width: 2.5;
-  fill: none;
-  overflow: visible;
-}
+.anno-akshita { top: -35px; right: 0px; flex-direction: column; align-items: flex-end; font-size: 1.5rem; }
+.arrow-1 { width: 40px; height: 40px; margin-top: -2px; }
 
-.anno-akshita {
-  top: -45px;
-  right: 0px;
-  flex-direction: column;
-  align-items: flex-end;
-  font-size: 1.8rem;
-}
-.arrow-1 { width: 50px; height: 50px; margin-top: -2px; }
+.anno-artist { top: 32%; left: -150px; flex-direction: row; align-items: center; font-size: 1.5rem; }
+.arrow-2 { width: 60px; height: 35px; transform: rotate(10deg); }
 
-.anno-artist {
-  top: 32%;
-  left: -180px;
-  flex-direction: row;
-  align-items: center;
-  font-size: 1.8rem;
-}
-.arrow-2 { width: 70px; height: 45px; transform: rotate(10deg); }
-
-/* ==========================================
-   FOOTER
-   ========================================== */
-.site-footer {
-  width: 100%;
-  box-sizing: border-box;
-  background: #1a1614;
-  padding: 1.5rem 5%; 
-  text-align: center;
-  color: var(--text-light);
-}
-
-.site-footer h2 {
-  font-family: 'Permanent Marker', cursive; 
-  color: var(--accent-script); 
-  font-size: 2rem;
-  margin-bottom: 0.25rem;
-}
-
-.footer-links {
+/* Art & Photography Tape Sections (Tighter Vertical Spacing) */
+.artworks-tape-section {
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 1.5rem;
-  margin-top: 0.5rem;
-  flex-wrap: wrap;
+  gap: 4rem;
+  padding: 2rem 5%; /* Reduced vertical padding to close the gap */
+  position: relative;
+  border-bottom: 2px dashed rgba(255,255,255,0.3);
 }
 
-.footer-links a {
-  color: var(--text-light);
-  text-decoration: none;
-  font-family: var(--font-sans);
-  font-weight: bold;
-  letter-spacing: 1px;
-  font-size: 0.85rem;
-  padding: 6px 14px;
-  border: 1px solid rgba(255,255,255,0.2);
-  transition: all 0.3s ease;
+.pink-tape-banner {
+  position: relative;
+  width: 480px;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-.footer-links a:hover {
-  background: var(--bg-pink);
-  color: #fdfdfc;
+.pink-tape-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill; 
+  z-index: 1;
+  opacity: 0.9;
+  border-radius: 12px;
+  filter: drop-shadow(4px 8px 15px rgba(0,0,0,0.25));
 }
 
-/* ==========================================
-   PROJECTS PAGE STYLING
-   ========================================== */
-.projects-page-section {
-  padding: 4rem 5%;
-  min-height: 80vh;
+.artworks-overlap-group {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 25px;
+  align-items: center;
+  justify-items: center;
+}
+
+.artwork-polaroid {
+  background: white;
+  padding: 8px 8px 20px 8px;
+  border: 2px solid #111 !important;
+  box-shadow: 5px 6px 0px rgba(0, 0, 0, 0.3) !important;
+  width: 200px; 
+}
+
+.art-piece-1, .photo-piece-1 { transform: rotate(-5deg); }
+.art-piece-2, .photo-piece-2 { transform: rotate(4deg) translateY(12px); }
+.art-piece-3, .photo-piece-3 { transform: rotate(-3deg) translateY(-8px); }
+.art-piece-4, .photo-piece-4 { transform: rotate(6deg); }
+
+.artwork-polaroid img {
+  width: 100%;
+  height: 145px;
+  object-fit: contain;
+  background: #f4f4f4;
+  display: block;
+}
+
+.art-info-container,
+.photography-text-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  text-align: center;
+  max-width: 500px;
+  z-index: 2;
+  gap: 1.2rem;
+}
+
+.art-info-container .hero-about,
+.photography-text-container .hero-about {
+  align-items: center;
+  text-align: center;
+  padding: 18px;
+}
+
+/* Projects Page Layout & Hover Effects */
+.projects-page-section {
+  padding: 2.5rem 5%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
 .projects-header-container {
@@ -451,22 +490,22 @@ section {
 .projects-grid {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 2.5rem;
   flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 1100px;
   width: 100%;
 }
 
 .project-polaroid {
   background: white;
   color: var(--text-dark);
-  width: 320px;
-  padding: 15px 15px 25px 15px;
-  box-shadow: 5px 8px 20px rgba(0,0,0,0.2);
-  border: 2px solid #111;
+  width: 300px;
+  padding: 12px 12px 20px 12px;
+  border: 2px solid #111 !important;
+  box-shadow: 5px 6px 0px rgba(0, 0, 0, 0.3) !important;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
   transition: transform 0.3s ease;
 }
 
@@ -481,7 +520,7 @@ section {
 
 .project-image-frame {
   width: 100%;
-  height: 200px;
+  height: 175px;
   background: #eee;
   border: 1px solid #ddd;
 }
@@ -495,29 +534,29 @@ section {
 .project-info {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   text-align: left;
 }
 
 .project-info h3 {
   font-family: var(--font-serif);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: var(--text-dark);
 }
 
 .project-info p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #555;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 .project-actions-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 15px;
+  margin-top: 10px;
   border-top: 1px dashed #eee;
-  padding-top: 12px;
+  padding-top: 10px;
 }
 
 .github-icon-btn {
@@ -526,8 +565,8 @@ section {
   justify-content: center;
   background: var(--bg-pink);
   color: white;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   transition: transform 0.2s ease, background 0.2s ease;
 }
@@ -541,9 +580,9 @@ section {
   background: transparent;
   border: 2px solid var(--bg-pink);
   color: var(--accent-script);
-  padding: 6px 14px;
+  padding: 5px 12px;
   font-weight: bold;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -554,27 +593,7 @@ section {
   color: white;
 }
 
-.project-link-btn {
-  margin-top: 10px;
-  display: inline-block;
-  background: var(--bg-pink);
-  color: white;
-  padding: 6px 12px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.85rem;
-  text-align: center;
-  border-radius: 4px;
-  letter-spacing: 1px;
-}
-
-.project-link-btn:hover {
-  background: var(--accent-script);
-}
-
-/* ==========================================
-   RESUME PAGE STYLING
-   ========================================== */
+/* Resume Page Layout (Restored Original Style) */
 .resume-page-section {
   padding: 4rem 5%;
   min-height: 80vh;
@@ -619,151 +638,78 @@ section {
   overflow: hidden;
 }
 
-/* ==========================================
-   Y2K SCRAPBOOK DOODLE & STICKER STYLING
-   ========================================== */
-.portfolio-wrapper {
-  background-color: var(--bg-pink);
-  background-image: 
-    radial-gradient(rgba(255, 255, 255, 0.2) 1.5px, transparent 1.5px),
-    url('https://www.transparenttextures.com/patterns/dust.png');
-  background-size: 24px 24px, auto;
+.project-link-btn {
+  display: inline-block;
+  background: var(--bg-pink);
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-align: center;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  transition: background 0.2s ease;
 }
 
-.home-section, .projects-page-section, .resume-page-section {
-  position: relative;
-  overflow: hidden;
+.project-link-btn:hover {
+  background: var(--accent-script);
 }
 
-.home-section::before {
+/* Footer */
+.site-footer {
+  width: 100%;
+  background: #1a1614;
+  padding: 1rem 5%; 
+  text-align: center;
+  color: var(--text-light);
+}
+
+.site-footer h2 {
+  font-family: 'Permanent Marker', cursive; 
+  color: var(--accent-script); 
+  font-size: 1.6rem;
+  margin-bottom: 0.2rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.8rem;
+  padding: 5px 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  background: var(--text-light);
+  color: #1a1614;
+}
+
+/* Background Doodles */
+.home-section::before, .home-section::after {
   content: '✦  ⋆  ✧  ✦  ⋆  ✧  ✦';
   position: absolute;
-  top: 10px;
-  left: 2%;
   font-size: 1.5rem;
   color: rgba(255, 255, 255, 0.4);
   letter-spacing: 25px;
   pointer-events: none;
   z-index: 1;
   white-space: nowrap;
-  transform: rotate(-3deg);
 }
+.home-section::before { top: 10px; left: 2%; transform: rotate(-3deg); }
+.home-section::after { bottom: 10px; right: 2%; transform: rotate(4deg); }
 
-.home-section::after {
-  content: '✧  ✦  ⋆  ✧  ✦  ⋆  ✧';
-  position: absolute;
-  bottom: 10px;
-  right: 2%;
-  font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.4);
-  letter-spacing: 25px;
-  pointer-events: none;
-  z-index: 1;
-  white-space: nowrap;
-  transform: rotate(4deg);
-}
-
-.magazine-cutout {
-  border: 2px solid #111;
-  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
-}
-
-.serif-solid {
-  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
-}
-
-/* ==========================================
-   ART & PHOTOGRAPHY TAPE SECTIONS (SIDE-BY-SIDE WITH CENTERED CONTENT)
-   ========================================== */
-.artworks-tape-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5rem;
-  padding: 5rem 5%;
-  position: relative;
-  border-bottom: 2px dashed rgba(255,255,255,0.3);
-}
-
-.pink-tape-banner {
-  position: relative;
-  width: 440px;
-  min-height: 620px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.pink-tape-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: fill; 
-  z-index: 1;
-  opacity: 0.9;
-  border-radius: 12px;
-  filter: drop-shadow(4px 8px 15px rgba(0,0,0,0.25));
-}
-
-.artworks-overlap-group {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-  padding: 30px;
-  align-items: center;
-  justify-items: center;
-}
-
-.artwork-polaroid {
-  background: white;
-  padding: 10px 10px 24px 10px;
-  border: 2px solid #111 !important;
-  box-shadow: 6px 8px 0px rgba(0, 0, 0, 0.3) !important;
-  width: 185px; 
-}
-
-.art-piece-1, .photo-piece-1 { transform: rotate(-5deg); }
-.art-piece-2, .photo-piece-2 { transform: rotate(4deg) translateY(15px); }
-.art-piece-3, .photo-piece-3 { transform: rotate(-3deg) translateY(-10px); }
-.art-piece-4, .photo-piece-4 { transform: rotate(6deg); }
-
-.artwork-polaroid img {
-  width: 100%;
-  height: 155px;
-  object-fit: contain;
-  background: #f4f4f4;
-  display: block;
-}
-
-/* Side-by-side text containers with center-aligned content inside */
-.art-info-container,
-.photography-text-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 540px;
-  z-index: 2;
-  gap: 1.5rem;
-}
-
-.art-info-container .hero-about,
-.photography-text-container .hero-about {
-  align-items: center;
-  text-align: center;
-}
-
-/* ==========================================
-   MOBILE RESPONSIVENESS
-   ========================================== */
+/* Responsive Layout */
 @media (max-width: 1024px) {
   .home-section, .projects-section, .artworks-tape-section {
     flex-direction: column;
@@ -786,56 +732,18 @@ section {
     flex-wrap: wrap;
   }
 
-  .serif-solid {
-    font-size: 3rem !important;
-  }
+  .serif-solid { font-size: 2.8rem !important; }
+  .name-stamp { font-size: 3rem; right: -10%; }
   
-  .name-stamp {
-    font-size: 3.5rem;
-    right: -10%;
-  }
+  .vertical-title { writing-mode: horizontal-tb; transform: none; font-size: 2.5rem; }
+  .vertical-line { width: 150px; height: 2px; }
 
-  .vertical-title {
-    writing-mode: horizontal-tb;
-    transform: none;
-    font-size: 3rem;
-    letter-spacing: 5px;
-  }
-
-  .vertical-line {
-    width: 200px;
-    height: 2px;
-  }
-  .vertical-line::before, .vertical-line::after {
-    width: 2px;
-    height: 10px;
-    top: -4px;
-    left: auto;
-  }
-  .vertical-line::before { left: 0; }
-  .vertical-line::after { right: 0; bottom: auto; }
-
-  .nav-callouts-container {
-    justify-content: center;
-    gap: 3rem;
-  }
+  .nav-callouts-container { justify-content: center; gap: 2rem; }
 }
 
 @media (max-width: 768px) {
-  .nav-links {
-    gap: 1rem;
-  }
-  
-  .user-cutout {
-    width: 240px;
-  }
-  
-  .crossword-grid {
-    font-size: 1.8rem;
-    gap: 10px 15px;
-  }
-  
-  .annotation {
-    display: none; 
-  }
+  .nav-links { gap: 1rem; }
+  .user-cutout { width: 220px; }
+  .crossword-grid { font-size: 1.6rem; gap: 8px 12px; }
+  .annotation { display: none; }
 }
