@@ -1,16 +1,46 @@
-# React + Vite
+# ✦ My Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A little corner of the internet where **code meets creativity**.
 
-Currently, two official plugins are available:
+This is my personal portfolio website, a digital scrapbook that brings together the different things I love creating. I wanted the website to feel less like a traditional portfolio and more like opening someone's old scrapbook which is messy, colourful, personal, and full of things I’ve collected along the way.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+## Live Website
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**[Visit my portfolio →](https://portfolio-hecker56.vercel.app/)**
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Built With
+
+* **React + Vite** — frontend and component structure
+* **Vanilla CSS** — layout, animations, textures, scrapbook effects, and responsive styling
+* **CSS Grid & Flexbox** — page layouts and responsive sections
+* **Google Fonts** — Libre Baskerville, Shadows Into Light & Space Mono
+* **SVGs & Custom Assets** — hand drawn arrows, textures, stickers, and other visual elements
+
+## Run Locally
+
+Clone the repository:
+
+```bash
+git clone <your-repository-url>
+cd <your-project-folder>
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The site will then be available at the local URL provided by Vite.
+
+---
+
+Made by spendig an unreasonable amount of time spent adjusting tiny things by 2px. :)
