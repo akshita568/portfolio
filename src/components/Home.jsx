@@ -72,10 +72,10 @@ export default function Home() {
           
           <div className="hero-about" style={{ marginTop: '10px' }}>
             <p className="about-text-p" style={{ marginBottom: '1.2rem' }}>
-              Art is where my intuition takes over. Whether it's digital illustration or experimental visual design, creating gives me a space to explore textures, color palettes, and storytelling without constraints.
+              I started seriously making art during lockdown and honestly, I haven’t stopped since. I went from being a complete beginner, figuring things out as I went, to developing my own style and taking my art much more seriously.
             </p>
             <p className="about-text-p">
-              I love how artistic expression influences the way I approach code—both require an eye for structure, rhythm, and a distinct emotional resonance.
+              Since then, I’ve sold many of my pieces both online and offline, built my own art website, and grown a social media art account with a community of people who genuinely follow and support my work.
             </p>
           </div>
         </div>
@@ -91,10 +91,10 @@ export default function Home() {
           
           <div className="hero-about" style={{ marginTop: '10px' }}>
             <p className="about-text-p" style={{ marginBottom: '1.2rem' }}>
-              Capturing moments through photography lets me freeze fleeting light, architecture, and raw landscapes. It trains my eye to notice composition, lighting, and detail in everyday environments.
+              I’m not a professional photographer, but photography is something I really enjoy. See something pretty? Click! click!!  gotta take a picture. Sometimes it’s just to remember the moment, and sometimes I’ll look at it later and think, “I should paint this someday.”
             </p>
             <p className="about-text-p">
-              Every frame tells a story, serving as a visual journal of places explored and perspectives discovered along the way.
+              I genuinely love travelling and taking pictures of every pretty view I come across. Mountains, sunsets, random streets, little details, if I find it beautiful, chances are I’m taking a picture of it.
             </p>
           </div>
         </div>
