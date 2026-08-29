@@ -23,8 +23,8 @@ This is my personal portfolio website, a digital scrapbook that brings together 
 Clone the repository:
 
 ```bash
-git clone <your-repository-url>
-cd <your-project-folder>
+git clone https://github.com/akshita568/portfolio
+cd portfolio
 ```
 
 Install dependencies:
