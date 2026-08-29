@@ -1,0 +1,801 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Shadows+Into+Light&family=Space+Mono&display=swap');
+
+:root {
+  --bg-pink: #b35673; 
+  --text-dark: #111;
+  --text-light: #fff;
+  --accent-script: #8a2a46; 
+  
+  --font-serif: 'Libre Baskerville', serif;
+  --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-script: 'Shadows Into Light', cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-pink);
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  text-align: left;
+}
+
+.portfolio-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  color: var(--text-light);
+  font-family: var(--font-sans);
+  background-image: url('https://www.transparenttextures.com/patterns/dust.png'); 
+  display: flex;
+  flex-direction: column;
+}
+
+.magazine-cutout {
+  background: var(--text-dark);
+  color: var(--text-light);
+  padding: 4px 12px;
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-weight: 900;
+  font-size: 1.8rem;
+  letter-spacing: -1px;
+}
+
+.serif-solid {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  line-height: 0.9;
+  font-size: 4.5rem !important;
+}
+
+.pill-badge {
+  border: 2px solid white;
+  border-radius: 50px;
+  padding: 6px 18px;
+  font-family: var(--font-sans);
+  font-weight: bold;
+  font-size: 0.85rem;
+  display: inline-block;
+}
+
+.collage-star {
+  width: 80px;
+  height: 80px;
+  background: white;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  position: absolute;
+  z-index: 10;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%; /* Balanced padding so it's not too thick */
+  background: #111; /* Solid black background */
+  border-bottom: 2px solid rgba(255,255,255,0.1);
+  font-family: var(--font-sans);
+  font-size: 0.95rem; /* Moderately increased, not too large */
+  font-weight: bold;
+  letter-spacing: 1px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-brand {
+  font-size: 1.05rem;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+.nav-links { 
+  display: flex; 
+  gap: 2rem; 
+  list-style: none; 
+}
+
+.nav-links a { 
+  color: #fff; 
+  text-decoration: none; 
+  text-transform: uppercase;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+section {
+  padding: 2rem 3%; 
+  position: relative;
+  min-height: 50vh; 
+  display: flex;
+  align-items: center;
+  border-bottom: 2px dashed rgba(255,255,255,0.3);
+}
+
+/* --- HOME / HERO SECTION --- */
+.home-section {
+  justify-content: flex-start; 
+  gap: 2rem;
+  padding-top: 3rem; /* Adds breathing room below the sticky navbar to prevent overlap */
+  padding-left: 1%;
+}
+
+.hero-visuals {
+  position: relative;
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: nowrap; 
+  align-items: center;
+  gap: 1.5rem; 
+}
+
+.user-cutout {
+  width: 425px;
+  max-width: 100%;
+  height: auto;
+  filter: grayscale(100%) contrast(120%);
+  position: relative;
+  z-index: 5;
+}
+
+.name-stamp {
+  font-family: var(--font-script);
+  font-size: 5rem;
+  color: white;
+  position: absolute;
+  bottom: 8%; 
+  right: -5%;
+  transform: rotate(-10deg);
+  z-index: 6;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  white-space: nowrap;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.5rem;
+  max-width: 580px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.hero-about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  color: var(--text-dark);              /* Ensures text is dark and readable on white */
+  padding: 25px;
+  border-radius: 6px;
+  border: 2px dashed #111;              /* Dashed black border line */
+}
+
+.hero-about .about-text-p {
+  color: #f5f3f3;
+}
+
+.about-text-p {
+  font-size: 1rem;
+  line-height: 1.5; 
+  margin-bottom: 0; 
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.camera-roll-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0; 
+  justify-content: center;
+  padding: 12px;
+  border: 2px dotted #111;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 6px;
+}
+
+.portrait-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0; 
+}
+
+
+
+.polaroid-mini {
+  width: 140px; 
+  height: 165px;
+  background: white;
+  padding: 8px 8px 25px 8px;
+  box-shadow: 3px 4px 10px rgba(0,0,0,0.15);
+}
+
+.polaroid-mini img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #ccc;
+}
+
+.polaroid-mini:nth-child(1) { transform: rotate(3deg); }
+.polaroid-mini:nth-child(2) { transform: rotate(-2deg); }
+.polaroid-mini:nth-child(3) { transform: rotate(2deg); }
+
+/* --- PROJECTS / CROSSWORD SECTION --- */
+.projects-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 4rem 5%;
+}
+
+.contents-sidebar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.vertical-title {
+  font-family: var(--font-serif);
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.4);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 8px;
+}
+
+.vertical-line {
+  width: 2px;
+  height: 300px;
+  background-color: white;
+  position: relative;
+}
+.vertical-line::before, .vertical-line::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  background-color: white;
+  left: -3px;
+}
+.vertical-line::before { top: 0; }
+.vertical-line::after { bottom: 0; }
+
+.projects-middle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 420px;
+}
+
+.projects-cutout {
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%) contrast(120%);
+  position: relative;
+  z-index: 5;
+}
+
+.projects-star {
+  bottom: 10px;
+  left: -30px;
+  transform: rotate(-25deg);
+  width: 75px;
+  height: 75px;
+  z-index: 6;
+}
+
+.crossword-container {
+  position: relative;
+  padding: 40px 60px;
+}
+
+.crossword-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 22px 28px;
+  font-family: var(--font-sans);
+  font-size: 3.8rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: lowercase;
+  position: relative;
+}
+
+.crossword-grid span {
+  position: relative;
+  z-index: 2;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.word-circle {
+  position: absolute;
+  border: 3px solid white;
+  border-radius: 50% / 30%; 
+  z-index: 1;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+}
+
+.circle-akshita { 
+  top: 2%;
+  left: -2%;
+  width: 104%;
+  height: 18%;
+  transform: rotate(-1deg);
+}
+
+.circle-artist { 
+  top: 35%;
+  left: -2%;
+  width: 88%;
+  height: 18%;
+  transform: rotate(1deg);
+}
+
+.circle-coder { 
+  top: 68%;
+  left: 12%;
+  width: 74%;
+  height: 18%;
+  transform: rotate(-2deg);
+}
+
+/* --- CORRECTED ANNOTATIONS & ARROWS --- */
+.annotation {
+  position: absolute;
+  font-family: var(--font-script);
+  font-size: 1.4rem;
+  color: white;
+  z-index: 10;
+  display: flex;
+  white-space: nowrap;
+}
+
+.arrow-svg {
+  stroke: white;
+  stroke-width: 2.5;
+  fill: none;
+  overflow: visible;
+}
+
+/* 1. That's me! (Top Right) */
+.anno-akshita {
+  top: -45px;
+  right: 0px;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 1.8rem;
+}
+.arrow-1 {
+  width: 50px;
+  height: 50px;
+  margin-top: -2px;
+}
+
+/* 2. Creative Expression (Middle Left - Moved slightly upwards) */
+.anno-artist {
+  top: 32%;
+  left: -180px;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.8rem;
+}
+.anno-artist .anno-text {
+  margin-right: 0px;
+
+}
+.arrow-2 {
+  width: 70px;
+  height: 45px;
+  transform: rotate(10deg);
+}
+
+/* --- FOOTER --- */
+.site-footer {
+  width: 100%;
+  box-sizing: border-box;
+  background: #1a1614;
+  padding: 1.5rem 5%; 
+  text-align: center;
+  color: var(--text-light);
+}
+
+.site-footer h2 {
+  font-family: 'Permanent Marker', cursive; 
+  color: var(--accent-script); 
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  background: var(--text-light);
+  color: #1a1614;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 1024px) {
+  .home-section, .projects-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .hero-header, .hero-content, .hero-about {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-visuals {
+    flex-wrap: wrap; 
+    justify-content: center;
+  }
+
+  .camera-roll-vertical {
+    flex-direction: row; 
+    flex-wrap: wrap;
+  }
+
+  .serif-solid {
+    font-size: 3rem !important;
+  }
+  
+  .name-stamp {
+    font-size: 3.5rem;
+    right: -10%;
+  }
+
+  .vertical-title {
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 3rem;
+    letter-spacing: 5px;
+  }
+
+  .vertical-line {
+    width: 200px;
+    height: 2px;
+  }
+  .vertical-line::before, .vertical-line::after {
+    width: 2px;
+    height: 10px;
+    top: -4px;
+    left: auto;
+  }
+  .vertical-line::before { left: 0; }
+  .vertical-line::after { right: 0; bottom: auto; }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 1rem;
+  }
+  
+  .user-cutout {
+    width: 240px;
+  }
+  
+  .crossword-grid {
+    font-size: 1.8rem;
+    gap: 10px 15px;
+  }
+  
+  .annotation {
+    display: none; 
+  }
+}
+
+/* --- PROJECTS PAGE STYLING --- */
+.projects-page-section {
+  padding: 4rem 5%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.projects-header-container {
+  position: relative;
+  text-align: center;
+}
+
+.projects-grid {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.project-polaroid {
+  background: white;
+  color: var(--text-dark);
+  width: 320px;
+  padding: 15px 15px 25px 15px;
+  box-shadow: 5px 8px 20px rgba(0,0,0,0.2);
+  border: 2px solid #111; /* Adds a solid black line border around each project card */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.3s ease;
+}
+
+.project-polaroid:nth-child(1) { transform: rotate(-2deg); }
+.project-polaroid:nth-child(2) { transform: rotate(1deg); }
+.project-polaroid:nth-child(3) { transform: rotate(-1deg); }
+
+.project-polaroid:hover {
+  transform: scale(1.03) rotate(0deg);
+  z-index: 10;
+}
+
+.project-image-frame {
+  width: 100%;
+  height: 200px;
+  background: #eee;
+  border: 1px solid #ddd;
+}
+
+.project-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.project-info h3 {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--text-dark);
+}
+
+.project-info p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.project-link-btn {
+  margin-top: 10px;
+  display: inline-block;
+  background: var(--bg-pink);
+  color: white;
+  padding: 6px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-align: center;
+  border-radius: 4px;
+  letter-spacing: 1px;
+}
+
+.project-link-btn:hover {
+  background: var(--accent-script);
+}
+
+/* --- UPDATED PROJECT CARD ACTIONS & ICONS --- */
+.project-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  border-top: 1px dashed #eee;
+  padding-top: 12px;
+}
+
+.github-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-pink);
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.github-icon-btn:hover {
+  background: var(--text-dark);
+  transform: scale(1.1);
+}
+
+.read-more-btn {
+  background: transparent;
+  border: 2px solid var(--bg-pink);
+  color: var(--accent-script);
+  padding: 6px 14px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.read-more-btn:hover {
+  background: var(--bg-pink);
+  color: white;
+}
+
+/* --- RESUME PAGE STYLING --- */
+.resume-page-section {
+  padding: 4rem 5%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.resume-header-container {
+  position: relative;
+  text-align: center;
+}
+
+.resume-paper {
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--text-dark);
+  width: 100%;
+  max-width: 900px;
+  padding: 30px;
+  border-radius: 8px;
+  border: 2px dashed rgba(0, 0, 0, 0.3);
+  box-shadow: 6px 10px 25px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  transform: rotate(0.5deg);
+}
+
+.resume-download-bar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pdf-viewer-container {
+  width: 100%;
+  height: 700px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.project-link-btn {
+  display: inline-block;
+  background: var(--bg-pink);
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-align: center;
+  border-radius: 4px;
+  letter-spacing: 1px;
+}
+
+.project-link-btn:hover {
+  background: var(--accent-script);
+}
+
+/* --- Y2K SCRAPBOOK DOODLE & STICKER STYLING --- */
+
+/* Add subtle starry doodle motifs and grid textures to the background */
+.portfolio-wrapper {
+  background-color: var(--bg-pink);
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.2) 1.5px, transparent 1.5px),
+    url('https://www.transparenttextures.com/patterns/dust.png');
+  background-size: 24px 24px, auto;
+}
+
+/* Doodle star accents floating on sections */
+.home-section, .projects-page-section, .resume-page-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.home-section::before {
+  content: '✦  ⋆  ✧  ✦  ⋆  ✧  ✦';
+  position: absolute;
+  top: 10px;
+  left: 2%;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 25px;
+  pointer-events: none;
+  z-index: 1;
+  white-space: nowrap;
+  transform: rotate(-3deg);
+}
+
+.home-section::after {
+  content: '✧  ✦  ⋆  ✧  ✦  ⋆  ✧';
+  position: absolute;
+  bottom: 10px;
+  right: 2%;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 25px;
+  pointer-events: none;
+  z-index: 1;
+  white-space: nowrap;
+  transform: rotate(4deg);
+}
+
+/* Hard sticker-style drop shadows and borders for polaroids and cards */
+.polaroid-mini, .project-polaroid, .resume-paper {
+  border: 2px solid #111 !important;
+  box-shadow: 5px 6px 0px rgba(0, 0, 0, 0.3) !important; /* Hard offset comic/sticker shadow */
+}
+
+/* Magazine cutouts get crisp sticker borders too */
+.magazine-cutout {
+  border: 2px solid #111;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* Soft text shadow for headings to mimic ink */
+.serif-solid {
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+}
