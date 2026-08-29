@@ -5,7 +5,6 @@
   --text-dark: #111;
   --text-light: #fff;
   --accent-script: #8a2a46; 
-  
   --font-serif: 'Libre Baskerville', serif;
   --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-script: 'Shadows Into Light', cursive;
@@ -44,6 +43,9 @@ html, body {
   flex-direction: column;
 }
 
+/* ==========================================
+   GLOBAL UTILITIES
+   ========================================== */
 .magazine-cutout {
   background: var(--text-dark);
   color: var(--text-light);
@@ -83,28 +85,25 @@ html, body {
   z-index: 10;
 }
 
-/* --- NAVBAR --- */
+/* ==========================================
+   NAVBAR
+   ========================================== */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 1rem 5%; /* Balanced padding so it's not too thick */
-  background: #111; /* Solid black background */
+  padding: 1rem 5%;
+  background: #111;
   border-bottom: 2px solid rgba(255,255,255,0.1);
   font-family: var(--font-sans);
-  font-size: 0.95rem; /* Moderately increased, not too large */
+  font-size: 1.3rem;
   font-weight: bold;
   letter-spacing: 1px;
-  position: sticky;
+  position: static;
   top: 0;
   z-index: 1000;
 }
 
-.nav-brand {
-  font-size: 1.05rem;
-  color: #fff;
-  letter-spacing: 1.5px;
-}
 
 .nav-links { 
   display: flex; 
@@ -133,11 +132,13 @@ section {
   border-bottom: 2px dashed rgba(255,255,255,0.3);
 }
 
-/* --- HOME / HERO SECTION --- */
+/* ==========================================
+   HOME / HERO SECTION
+   ========================================== */
 .home-section {
   justify-content: flex-start; 
   gap: 2rem;
-  padding-top: 3rem; /* Adds breathing room below the sticky navbar to prevent overlap */
+  padding-top: 3rem;
   padding-left: 1%;
 }
 
@@ -193,10 +194,10 @@ section {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  color: var(--text-dark);              /* Ensures text is dark and readable on white */
+  color: var(--text-dark);
   padding: 25px;
   border-radius: 6px;
-  border: 2px dashed #111;              /* Dashed black border line */
+  border: 2px dashed #111;
 }
 
 .hero-about .about-text-p {
@@ -230,8 +231,6 @@ section {
   flex-shrink: 0; 
 }
 
-
-
 .polaroid-mini {
   width: 140px; 
   height: 165px;
@@ -251,7 +250,7 @@ section {
 .polaroid-mini:nth-child(2) { transform: rotate(-2deg); }
 .polaroid-mini:nth-child(3) { transform: rotate(2deg); }
 
-/* --- PROJECTS / CROSSWORD SECTION --- */
+/* PROJECTS / CROSSWORD SECTION */
 .projects-section {
   display: flex;
   justify-content: center;
@@ -281,6 +280,7 @@ section {
   background-color: white;
   position: relative;
 }
+
 .vertical-line::before, .vertical-line::after {
   content: '';
   position: absolute;
@@ -348,31 +348,10 @@ section {
   box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
 }
 
-.circle-akshita { 
-  top: 2%;
-  left: -2%;
-  width: 104%;
-  height: 18%;
-  transform: rotate(-1deg);
-}
+.circle-akshita { top: 2%; left: -2%; width: 104%; height: 18%; transform: rotate(-1deg); }
+.circle-artist { top: 35%; left: -2%; width: 88%; height: 18%; transform: rotate(1deg); }
+.circle-coder { top: 68%; left: 12%; width: 74%; height: 18%; transform: rotate(-2deg); }
 
-.circle-artist { 
-  top: 35%;
-  left: -2%;
-  width: 88%;
-  height: 18%;
-  transform: rotate(1deg);
-}
-
-.circle-coder { 
-  top: 68%;
-  left: 12%;
-  width: 74%;
-  height: 18%;
-  transform: rotate(-2deg);
-}
-
-/* --- CORRECTED ANNOTATIONS & ARROWS --- */
 .annotation {
   position: absolute;
   font-family: var(--font-script);
@@ -390,7 +369,6 @@ section {
   overflow: visible;
 }
 
-/* 1. That's me! (Top Right) */
 .anno-akshita {
   top: -45px;
   right: 0px;
@@ -398,13 +376,8 @@ section {
   align-items: flex-end;
   font-size: 1.8rem;
 }
-.arrow-1 {
-  width: 50px;
-  height: 50px;
-  margin-top: -2px;
-}
+.arrow-1 { width: 50px; height: 50px; margin-top: -2px; }
 
-/* 2. Creative Expression (Middle Left - Moved slightly upwards) */
 .anno-artist {
   top: 32%;
   left: -180px;
@@ -412,17 +385,11 @@ section {
   align-items: center;
   font-size: 1.8rem;
 }
-.anno-artist .anno-text {
-  margin-right: 0px;
+.arrow-2 { width: 70px; height: 45px; transform: rotate(10deg); }
 
-}
-.arrow-2 {
-  width: 70px;
-  height: 45px;
-  transform: rotate(10deg);
-}
-
-/* --- FOOTER --- */
+/* ==========================================
+   FOOTER
+   ========================================== */
 .site-footer {
   width: 100%;
   box-sizing: border-box;
@@ -460,83 +427,13 @@ section {
 }
 
 .footer-links a:hover {
-  background: var(--text-light);
-  color: #1a1614;
+  background: var(--bg-pink);
+  color: #fdfdfc;
 }
 
-/* --- MOBILE RESPONSIVENESS --- */
-@media (max-width: 1024px) {
-  .home-section, .projects-section {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-  }
-  
-  .hero-header, .hero-content, .hero-about {
-    align-items: center;
-    text-align: center;
-  }
-  
-  .hero-visuals {
-    flex-wrap: wrap; 
-    justify-content: center;
-  }
-
-  .camera-roll-vertical {
-    flex-direction: row; 
-    flex-wrap: wrap;
-  }
-
-  .serif-solid {
-    font-size: 3rem !important;
-  }
-  
-  .name-stamp {
-    font-size: 3.5rem;
-    right: -10%;
-  }
-
-  .vertical-title {
-    writing-mode: horizontal-tb;
-    transform: none;
-    font-size: 3rem;
-    letter-spacing: 5px;
-  }
-
-  .vertical-line {
-    width: 200px;
-    height: 2px;
-  }
-  .vertical-line::before, .vertical-line::after {
-    width: 2px;
-    height: 10px;
-    top: -4px;
-    left: auto;
-  }
-  .vertical-line::before { left: 0; }
-  .vertical-line::after { right: 0; bottom: auto; }
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    gap: 1rem;
-  }
-  
-  .user-cutout {
-    width: 240px;
-  }
-  
-  .crossword-grid {
-    font-size: 1.8rem;
-    gap: 10px 15px;
-  }
-  
-  .annotation {
-    display: none; 
-  }
-}
-
-/* --- PROJECTS PAGE STYLING --- */
+/* ==========================================
+   PROJECTS PAGE STYLING
+   ========================================== */
 .projects-page-section {
   padding: 4rem 5%;
   min-height: 80vh;
@@ -566,7 +463,7 @@ section {
   width: 320px;
   padding: 15px 15px 25px 15px;
   box-shadow: 5px 8px 20px rgba(0,0,0,0.2);
-  border: 2px solid #111; /* Adds a solid black line border around each project card */
+  border: 2px solid #111;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -614,25 +511,6 @@ section {
   line-height: 1.4;
 }
 
-.project-link-btn {
-  margin-top: 10px;
-  display: inline-block;
-  background: var(--bg-pink);
-  color: white;
-  padding: 6px 12px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.85rem;
-  text-align: center;
-  border-radius: 4px;
-  letter-spacing: 1px;
-}
-
-.project-link-btn:hover {
-  background: var(--accent-script);
-}
-
-/* --- UPDATED PROJECT CARD ACTIONS & ICONS --- */
 .project-actions-row {
   display: flex;
   align-items: center;
@@ -676,7 +554,27 @@ section {
   color: white;
 }
 
-/* --- RESUME PAGE STYLING --- */
+.project-link-btn {
+  margin-top: 10px;
+  display: inline-block;
+  background: var(--bg-pink);
+  color: white;
+  padding: 6px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-align: center;
+  border-radius: 4px;
+  letter-spacing: 1px;
+}
+
+.project-link-btn:hover {
+  background: var(--accent-script);
+}
+
+/* ==========================================
+   RESUME PAGE STYLING
+   ========================================== */
 .resume-page-section {
   padding: 4rem 5%;
   min-height: 80vh;
@@ -721,26 +619,9 @@ section {
   overflow: hidden;
 }
 
-.project-link-btn {
-  display: inline-block;
-  background: var(--bg-pink);
-  color: white;
-  padding: 8px 16px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.85rem;
-  text-align: center;
-  border-radius: 4px;
-  letter-spacing: 1px;
-}
-
-.project-link-btn:hover {
-  background: var(--accent-script);
-}
-
-/* --- Y2K SCRAPBOOK DOODLE & STICKER STYLING --- */
-
-/* Add subtle starry doodle motifs and grid textures to the background */
+/* ==========================================
+   Y2K SCRAPBOOK DOODLE & STICKER STYLING
+   ========================================== */
 .portfolio-wrapper {
   background-color: var(--bg-pink);
   background-image: 
@@ -749,7 +630,6 @@ section {
   background-size: 24px 24px, auto;
 }
 
-/* Doodle star accents floating on sections */
 .home-section, .projects-page-section, .resume-page-section {
   position: relative;
   overflow: hidden;
@@ -783,19 +663,179 @@ section {
   transform: rotate(4deg);
 }
 
-/* Hard sticker-style drop shadows and borders for polaroids and cards */
-.polaroid-mini, .project-polaroid, .resume-paper {
-  border: 2px solid #111 !important;
-  box-shadow: 5px 6px 0px rgba(0, 0, 0, 0.3) !important; /* Hard offset comic/sticker shadow */
-}
-
-/* Magazine cutouts get crisp sticker borders too */
 .magazine-cutout {
   border: 2px solid #111;
   box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
 }
 
-/* Soft text shadow for headings to mimic ink */
 .serif-solid {
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================
+   ART & PHOTOGRAPHY TAPE SECTIONS (SIDE-BY-SIDE WITH CENTERED CONTENT)
+   ========================================== */
+.artworks-tape-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  padding: 5rem 5%;
+  position: relative;
+  border-bottom: 2px dashed rgba(255,255,255,0.3);
+}
+
+.pink-tape-banner {
+  position: relative;
+  width: 440px;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.pink-tape-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill; 
+  z-index: 1;
+  opacity: 0.9;
+  border-radius: 12px;
+  filter: drop-shadow(4px 8px 15px rgba(0,0,0,0.25));
+}
+
+.artworks-overlap-group {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  padding: 30px;
+  align-items: center;
+  justify-items: center;
+}
+
+.artwork-polaroid {
+  background: white;
+  padding: 10px 10px 24px 10px;
+  border: 2px solid #111 !important;
+  box-shadow: 6px 8px 0px rgba(0, 0, 0, 0.3) !important;
+  width: 185px; 
+}
+
+.art-piece-1, .photo-piece-1 { transform: rotate(-5deg); }
+.art-piece-2, .photo-piece-2 { transform: rotate(4deg) translateY(15px); }
+.art-piece-3, .photo-piece-3 { transform: rotate(-3deg) translateY(-10px); }
+.art-piece-4, .photo-piece-4 { transform: rotate(6deg); }
+
+.artwork-polaroid img {
+  width: 100%;
+  height: 155px;
+  object-fit: contain;
+  background: #f4f4f4;
+  display: block;
+}
+
+/* Side-by-side text containers with center-aligned content inside */
+.art-info-container,
+.photography-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 540px;
+  z-index: 2;
+  gap: 1.5rem;
+}
+
+.art-info-container .hero-about,
+.photography-text-container .hero-about {
+  align-items: center;
+  text-align: center;
+}
+
+/* ==========================================
+   MOBILE RESPONSIVENESS
+   ========================================== */
+@media (max-width: 1024px) {
+  .home-section, .projects-section, .artworks-tape-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .hero-header, .hero-content, .hero-about, .art-info-container, .photography-text-container {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-visuals {
+    flex-wrap: wrap; 
+    justify-content: center;
+  }
+
+  .camera-roll-vertical {
+    flex-direction: row; 
+    flex-wrap: wrap;
+  }
+
+  .serif-solid {
+    font-size: 3rem !important;
+  }
+  
+  .name-stamp {
+    font-size: 3.5rem;
+    right: -10%;
+  }
+
+  .vertical-title {
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 3rem;
+    letter-spacing: 5px;
+  }
+
+  .vertical-line {
+    width: 200px;
+    height: 2px;
+  }
+  .vertical-line::before, .vertical-line::after {
+    width: 2px;
+    height: 10px;
+    top: -4px;
+    left: auto;
+  }
+  .vertical-line::before { left: 0; }
+  .vertical-line::after { right: 0; bottom: auto; }
+
+  .nav-callouts-container {
+    justify-content: center;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 1rem;
+  }
+  
+  .user-cutout {
+    width: 240px;
+  }
+  
+  .crossword-grid {
+    font-size: 1.8rem;
+    gap: 10px 15px;
+  }
+  
+  .annotation {
+    display: none; 
+  }
 }
