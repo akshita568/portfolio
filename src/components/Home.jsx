@@ -4,8 +4,6 @@ export default function Home() {
       {/* --- HERO SECTION --- */}
       <section id="home" className="home-section">
 
-        
-        {/* Left Side: Visuals (Portrait + Camera Roll) */}
         <div className="hero-visuals">
           
           <div className="portrait-wrapper">
@@ -26,7 +24,6 @@ export default function Home() {
         {/* Right Side: Combined Content */}
         <div className="hero-content">
 
-          {/* Header Block */}
           <div className="hero-header" style={{ position: 'relative', width: '100%', marginTop: '10px' }}>
             <div className="magazine-cutout" style={{ position: 'absolute', top: '-65px', right: '100px', zIndex: 2, transform: 'rotate(-3deg)' }}>
               meet the

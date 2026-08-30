@@ -11,19 +11,16 @@ export default function Crossword() {
   return (
     <section id="projects" className="projects-section">
       
-      {/* 1. Sidebar: Contents */}
       <div className="contents-sidebar">
         <div className="vertical-title">CONTENTS</div>
         <div className="vertical-line"></div>
       </div>
 
-      {/* 2. Middle: Photo & Star */}
       <div className="projects-middle">
         <div className="collage-star projects-star"></div>
         <img src="/photos/me2.png" alt="Secondary Portrait" className="projects-cutout" />
       </div>
 
-      {/* 3. Right: Crossword Grid & Corrected Annotations */}
       <div className="crossword-container">
         
         <svg style={{ width: 0, height: 0, position: 'absolute' }}>
@@ -34,7 +31,7 @@ export default function Crossword() {
           </defs>
         </svg>
 
-        {/* Annotation 1: That's me! (Top Right pointing down to 'akshita') */}
+        {/* Annotation 1*/}
         <div className="annotation anno-akshita">
           <span className="anno-text">that's me!</span>
           <svg className="arrow-svg arrow-1" viewBox="0 0 60 60">
@@ -42,7 +39,7 @@ export default function Crossword() {
           </svg>
         </div>
         
-        {/* Annotation 2: Creative expression (Middle Left pointing to 'artist') */}
+        {/* Annotation 2 */}
         <div className="annotation anno-artist">
           <span className="anno-text">creative expression</span>
           <svg className="arrow-svg arrow-2" viewBox="0 0 90 50">

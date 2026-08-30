@@ -385,7 +385,7 @@ section {
 .anno-artist { top: 32%; left: -150px; flex-direction: row; align-items: center; font-size: 1.5rem; }
 .arrow-2 { width: 60px; height: 35px; transform: rotate(10deg); }
 
-/* Art & Photography Tape Sections (Tighter Vertical Spacing) */
+/* Art & Photography Tape Sections*/
 .artworks-tape-section {
   display: flex;
   align-items: center;
@@ -593,7 +593,7 @@ section {
   color: white;
 }
 
-/* Resume Page Layout (Restored Original Style) */
+/* Resume Page Layout*/
 .resume-page-section {
   padding: 4rem 5%;
   min-height: 80vh;
