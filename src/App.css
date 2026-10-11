@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Shadows+Into+Light&family=Space+Mono&display=swap');
 
 :root {
-  --bg-pink: #b35673; 
+  --bg-pink: #a13d5f; 
   --text-dark: #111;
   --text-light: #fff;
   --accent-script: #8a2a46; 
@@ -747,3 +747,4 @@ section {
   .crossword-grid { font-size: 1.6rem; gap: 8px 12px; }
   .annotation { display: none; }
 }
+

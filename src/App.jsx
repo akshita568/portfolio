@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar';
+import About from './components/About';
 import Home from './components/Home';
 import Projects from './components/Projects';
 import Crossword from './components/Crossword';
@@ -14,14 +15,15 @@ export default function App() {
       <main>
         <Routes>
           {/* Home Page Route */}
-          <Route path="/" element={
+          <Route path="/" element={<Home />} />
+          
+          {/* Dedicated Projects Page Route */}
+          <Route path="/about" element={
             <>
-              <Home />
+              <About />
               <Crossword />
             </>
           } />
-          
-          {/* Dedicated Projects Page Route */}
           <Route path="/projects" element={<Projects />} />
           <Route path="/resume" element={<Resume />} />
         </Routes>

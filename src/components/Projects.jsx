@@ -36,7 +36,7 @@ export default function Projects() {
       <div className="projects-header-container">
         <div className="collage-star" style={{ top: '-20px', left: '10px', transform: 'rotate(-15deg)' }}></div>
         <div className="magazine-cutout">MY WORK</div>
-        <h1 className="serif-solid" style={{ fontSize: '4rem !important', marginTop: '10px' }}>PROJECTS</h1>
+        <h1 className="serif-solid" style={{ fontSize: '4rem', marginTop: '10px' }}>PROJECTS</h1>
       </div>
 
       <div className="projects-grid">
