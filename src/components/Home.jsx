@@ -124,9 +124,7 @@ export default function Home() {
           </p>
 
           <ul className="intro-key-points-list">
-            <li className="intro-key-point-item">
-              Pre-final year student at <strong>NIT Hamirpur</strong> (Computer Science &amp; Engineering).
-            </li>
+            
             <li className="intro-key-point-item">
               Experienced with <strong>C++, Python, JavaScript, React, FastAPI</strong>, and databases, with hands-on experience building full-stack applications and integrating AI-powered features.
             </li>
