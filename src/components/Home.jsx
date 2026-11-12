@@ -120,16 +120,16 @@ export default function Home() {
           </div>
 
           <p className="intro-body-bio">
-            I am a pre-final year Computer Science student at <strong>NIT Hamirpur</strong>. I specialize in building end-to-end full-stack systems with <strong>C++, Python, JavaScript, React, FastAPI</strong>, and modern databases, bridging algorithmic performance with creative visual expression.
+            Computer Science undergraduate at <strong>NIT Hamirpur</strong> with an interest in software development, scalable systems, and building meaningful products. I enjoy combining logical problem-solving with creativity, whether through developing software or creating art.
           </p>
 
           <ul className="intro-key-points-list">
             
             <li className="intro-key-point-item">
-              Experienced with <strong>C++, Python, JavaScript, React, FastAPI</strong>, and databases, with hands-on experience building full-stack applications and integrating AI-powered features.
+              Built end-to-end applications using <strong>C++, Python, JavaScript, React, FastAPI</strong>, and databases.
             </li>
             <li className="intro-key-point-item">
-              Active problem solver, having solved <strong>400+ DSA problems</strong> across LeetCode, GeeksforGeeks, and Codeforces.
+              Solved <strong>400+ DSA problems</strong> across LeetCode, GeeksforGeeks, and Codeforces.
             </li>
             <li className="intro-key-point-item">
               A part-time professional artist who has sold many of her artworks online and offline.
@@ -269,7 +269,7 @@ export default function Home() {
                 <div className="dsa-metric-banner" style={{ marginTop: '1rem' }}>
                   <div className="dsa-metric-num">400+</div>
                   <div className="dsa-metric-desc">
-                    Problems conquered across LeetCode, GeeksforGeeks, and Codeforces covering dynamic programming, graphs, trees, and system logic.
+                    Problems solved across LeetCode, GeeksforGeeks, and Codeforces covering dynamic programming, graphs, trees, and system logic.
                   </div>
                 </div>
               </div>
