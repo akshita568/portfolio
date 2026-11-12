@@ -24,6 +24,20 @@ export default function Projects() {
       fullDesc: "Developed an end-to-end phishing URL detection pipeline covering MongoDB ingestion, preprocessing and model training. Built reusable configuration, logging, exception handling, and data ingestion modules to improve pipeline reliability and maintainability. Containerized the ML workflow using Docker for seamless deployment.",
       image: "/projects/networksec.png",
       github: "https://github.com/akshita568/network_security_threat_detection"
+    },
+    {
+      title: "Personal Developer & Art Portfolio",
+      shortDesc: "A dual-identity portfolio blending modern Bento Box architecture with a vintage scrapbook aesthetic.",
+      fullDesc: "Architected a high-performance personal portfolio uniting engineering problem-solving with artistic expression. Features an editorial Bento Box dashboard for technical skills, interactive DSA metrics, and a tactile free-flowing scrapbook gallery for fine art and travel photography. Built with React 19, Vite, Tailwind CSS, and custom responsive CSS grid modules.",
+      image: "/art/art2.png",
+      github: "https://github.com/akshita568/portfolio"
+    },
+    {
+      title: "Compiler Optimization Lab",
+      shortDesc: "Low-level code analysis and AST optimization passes implemented in C++ for intermediate representations.",
+      fullDesc: "Implemented low-level compiler optimization passes and control-flow graph (CFG) analysis in C++. Built algorithms for dead code elimination, constant propagation/folding, common subexpression elimination (CSE), and register allocation. Conducted instruction profiling to measure speedup and memory efficiency on benchmark program suites.",
+      image: "/projects/compactIQ.png",
+      github: "https://github.com/akshita568/compiler-optimization-lab"
     }
   ];
 
@@ -36,14 +50,19 @@ export default function Projects() {
       <div className="projects-header-container">
         <div className="collage-star" style={{ top: '-20px', left: '10px', transform: 'rotate(-15deg)' }}></div>
         <div className="magazine-cutout">MY WORK</div>
-        <h1 className="serif-solid" style={{ fontSize: '4rem', marginTop: '10px' }}>PROJECTS</h1>
+        <h1 className="serif-solid" style={{ fontSize: '4rem', marginTop: '10px', color: '#1B2533' }}>PROJECTS</h1>
       </div>
 
       <div className="projects-grid">
         {projectList.map((project, index) => (
           <div key={index} className="project-polaroid">
             <div className="project-image-frame">
-              <img src={project.image} alt={project.title} />
+              <img 
+                src={project.image} 
+                alt={project.title} 
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             
             <div className="project-info">
@@ -55,7 +74,7 @@ export default function Projects() {
 
               <div className="project-actions-row">
                 <a href={project.github} target="_blank" rel="noreferrer" className="github-icon-btn" title="View GitHub Repo">
-                  <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                  <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                   </svg>
                 </a>

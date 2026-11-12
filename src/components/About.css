@@ -1,0 +1,656 @@
+/* ==========================================================================
+   FREE-FLOWING SCRAPBOOK "ABOUT ME" STYLES (About.css)
+   Aesthetic:
+   - True artist scrapbook: Scattered placement, slight tilts, washi tape,
+     natural image sizing (containers shrink-wrap images), no rigid boxes.
+   - Palette: Warm Cream (#FAF5EE), Warm Off-White (#FCFBF7),
+     Slate Blue (#385273), Navy (#1B2533), Amber Gold (#D99B26).
+   ========================================================================== */
+
+.scrapbook-page-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  box-sizing: border-box;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Washi Tape Accent */
+.washi-tape {
+  position: absolute;
+  height: 20px;
+  width: 70px;
+  background-color: rgba(239, 236, 227, 0.88);
+  border: 1px dashed rgba(27, 37, 51, 0.3);
+  z-index: 10;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.tape-top-center {
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1deg);
+}
+
+.tape-corner-left {
+  top: -8px;
+  left: -12px;
+  transform: rotate(-15deg);
+}
+
+.tape-corner-right {
+  top: -8px;
+  right: -12px;
+  transform: rotate(15deg);
+}
+
+/* Magazine Cutout Header Pills */
+.scrapbook-cutout {
+  background-color: #1B2533;
+  color: #FCFBF7;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  display: inline-block;
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+  border: 1.5px solid #1B2533;
+  box-shadow: 3px 3px 0px rgba(27, 37, 51, 0.25);
+}
+
+.cutout-tilt-left { transform: rotate(-2.5deg); }
+.cutout-tilt-right { transform: rotate(2deg); }
+
+/* Playful Script Accent */
+.scrapbook-script {
+  font-family: 'Shadows Into Light', cursive;
+  color: #385273;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* 10-Point Star Badge */
+.scrapbook-star {
+  width: 50px;
+  height: 50px;
+  background-color: #D99B26;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  position: absolute;
+  z-index: 8;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.15));
+}
+
+/* ==========================================================================
+   1. HERO SCRAPBOOK SECTION ("MEET THE ARTIST")
+   ========================================================================== */
+.scrapbook-hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  position: relative;
+}
+
+.scrapbook-hero-left {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-meta-ribbon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #385273;
+  background-color: #E2EAF3;
+  padding: 4px 14px;
+  border-radius: 9999px;
+  border: 1.5px solid #1B2533;
+  width: fit-content;
+  box-shadow: 2px 2px 0px #1B2533;
+}
+
+.scrapbook-hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3.2rem, 7vw, 6rem);
+  line-height: 0.92;
+  letter-spacing: 2px;
+  color: #385273;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.scrapbook-hero-title span {
+  color: #1B2533;
+}
+
+.scrapbook-hero-quote-pill {
+  display: inline-block;
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #385273;
+  background-color: #FCFBF7;
+  border: 1.5px solid #1B2533;
+  padding: 6px 18px;
+  border-radius: 9999px;
+  box-shadow: 2px 2px 0px #1B2533;
+  width: fit-content;
+}
+
+/* Free-floating stationery text note */
+.scrapbook-note-card {
+  background-color: #FCFBF7;
+  border: 1.5px solid #1B2533;
+  padding: 1.4rem 1.6rem;
+  border-radius: 6px;
+  box-shadow: 4px 4px 0px #1B2533;
+  transform: rotate(-1deg);
+  max-width: 520px;
+  position: relative;
+}
+
+.scrapbook-note-card p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #334155;
+  margin: 0;
+}
+
+/* Hero Right Cutout Portrait */
+.scrapbook-hero-right {
+  flex: 0.9;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-cutout-wrapper {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  transform: rotate(2deg);
+}
+
+.hero-cutout-photo {
+  width: auto;
+  max-width: 320px;
+  max-height: 400px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
+  border: 2px solid #1B2533;
+  background-color: #FCFBF7;
+  padding: 8px;
+  box-shadow: 6px 8px 16px rgba(27, 37, 51, 0.16);
+}
+
+.hero-signature-stamp {
+  position: absolute;
+  bottom: -15px;
+  right: -10px;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.8rem;
+  color: #385273;
+  font-weight: 700;
+  transform: rotate(-8deg);
+  background: #FCFBF7;
+  padding: 2px 10px;
+  border: 1px dashed #385273;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   2. "ABOUT MYSELF" & VERTICAL PHOTO STRIPS
+   ========================================================================== */
+.scrapbook-myself-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.5rem;
+  position: relative;
+}
+
+.scrapbook-myself-left {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  position: relative;
+}
+
+/* Overlapping script title */
+.scrapbook-script-overlay {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  color: #385273;
+  line-height: 0.9;
+  transform: rotate(-4deg);
+  margin: -0.5rem 0 0.5rem;
+  letter-spacing: 1px;
+}
+
+.scrapbook-body-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #334155;
+  margin: 0;
+}
+
+.scrapbook-quote-banner {
+  background: #EFECE3;
+  border-left: 4px solid #385273;
+  padding: 0.9rem 1.2rem;
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #1B2533;
+  border-radius: 4px;
+}
+
+/* Passion stickers & badges (Taped note cards) */
+.scrapbook-passions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.scrapbook-passion-item {
+  background-color: #FCFBF7;
+  border: 1.5px solid #1B2533;
+  padding: 12px 14px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 0px #1B2533;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.scrapbook-passion-item:nth-child(odd) {
+  transform: rotate(-1.2deg);
+}
+
+.scrapbook-passion-item:nth-child(even) {
+  transform: rotate(1.4deg);
+}
+
+.scrapbook-passion-item:hover {
+  transform: rotate(0deg) translateY(-2px);
+  box-shadow: 4px 4px 0px #1B2533;
+}
+
+.passion-item-title {
+  display: block;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: #385273;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+.passion-item-desc {
+  display: block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.84rem;
+  color: #475569;
+  line-height: 1.45;
+}
+
+
+/* Photo Booth Filmstrips: Vertical Stack Visually Matching Adjacent Bio Text */
+.scrapbook-filmstrip-cluster {
+  flex: 0.85;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.15rem;
+  position: relative;
+  align-self: center;
+}
+
+.filmstrip-photo-item {
+  width: fit-content;
+  height: fit-content;
+  background-color: #FCFBF7;
+  border: 1.5px solid #1B2533;
+  padding: 6px 6px 14px 6px;
+  box-shadow: 4px 6px 12px rgba(27, 37, 51, 0.15);
+  position: relative;
+  transition: transform 0.25s ease, z-index 0.25s ease, box-shadow 0.25s ease;
+}
+
+.filmstrip-photo-item:hover {
+  transform: scale(1.06) rotate(0deg) !important;
+  z-index: 10;
+  box-shadow: 6px 10px 18px rgba(27, 37, 51, 0.22);
+}
+
+.filmstrip-photo-item:nth-child(1) { transform: rotate(-3deg); }
+.filmstrip-photo-item:nth-child(2) { transform: rotate(2.5deg) translateX(10px); }
+.filmstrip-photo-item:nth-child(3) { transform: rotate(-2deg); }
+
+/* Crucial CSS Rule: Natural scaling, original smaller dimensions */
+.scrapbook-filmstrip-img {
+  width: auto;
+  max-width: 125px;
+  max-height: 165px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  background-color: #FAF5EE;
+  border: 1px solid rgba(27, 37, 51, 0.1);
+}
+
+/* ==========================================================================
+   3. "WELCOME TO MY ART GALLERY" (Scattered Tabletop Cluster)
+   ========================================================================== */
+.scrapbook-gallery-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  position: relative;
+}
+
+.scrapbook-section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.scrapbook-gallery-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.8rem, 6vw, 4.6rem);
+  letter-spacing: 2px;
+  color: #385273;
+  margin: 0;
+  line-height: 0.95;
+}
+
+.scrapbook-gallery-title span {
+  color: #1B2533;
+}
+
+.scrapbook-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+/* Scattered Art Cluster (Tossed on a Desk) */
+.scrapbook-scatter-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 0.5rem;
+  position: relative;
+}
+
+.scatter-art-item {
+  width: fit-content;
+  height: fit-content;
+  background-color: #FCFBF7;
+  border: 1.5px solid #1B2533;
+  padding: 8px 8px 16px 8px;
+  box-shadow: 4px 6px 14px rgba(27, 37, 51, 0.14);
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.scatter-art-item:hover {
+  transform: scale(1.05) rotate(0deg) !important;
+  z-index: 10;
+  box-shadow: 8px 12px 22px rgba(27, 37, 51, 0.22);
+}
+
+/* Natural individual random rotations */
+.art-rotate-1 { transform: rotate(-3.5deg); }
+.art-rotate-2 { transform: rotate(3deg) translateY(12px); }
+.art-rotate-3 { transform: rotate(-2deg) translateY(-8px); }
+.art-rotate-4 { transform: rotate(4deg); }
+
+/* Crucial CSS Rule: Small, manageable, natural dimensions */
+.scrapbook-art-img {
+  width: auto;
+  max-width: 210px;
+  max-height: 230px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  background-color: #FAF5EE;
+  border: 1px solid rgba(27, 37, 51, 0.12);
+}
+
+/* ==========================================================================
+   4. "THROUGH THE LENS" PHOTOGRAPHY (Hanging Clothesline Style)
+   ========================================================================== */
+.scrapbook-photography-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  position: relative;
+}
+
+.clothesline-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 1rem 0;
+}
+
+/* The Hanging Clothesline String */
+.clothesline-rope {
+  width: 100%;
+  height: 2px;
+  background-color: #385273;
+  opacity: 0.5;
+  position: relative;
+  margin-bottom: -15px;
+  z-index: 2;
+}
+
+.clothesline-photos-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.8rem;
+  position: relative;
+  z-index: 3;
+}
+
+.clothesline-photo-item {
+  width: fit-content;
+  height: fit-content;
+  background-color: #FCFBF7;
+  border: 1.5px solid #1B2533;
+  padding: 8px 8px 16px 8px;
+  box-shadow: 3px 5px 12px rgba(27, 37, 51, 0.14);
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.clothesline-photo-item:hover {
+  transform: scale(1.06) rotate(0deg) !important;
+  z-index: 10;
+  box-shadow: 6px 10px 20px rgba(27, 37, 51, 0.22);
+}
+
+/* Little clothesline clip / binder clip on top */
+.clothesline-clip {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 14px;
+  background-color: #1B2533;
+  border-radius: 2px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  z-index: 5;
+}
+
+.clothesline-clip::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  height: 2px;
+  background: #FCFBF7;
+}
+
+.photo-rotate-1 { transform: rotate(-4deg); }
+.photo-rotate-2 { transform: rotate(2deg) translateY(10px); }
+.photo-rotate-3 { transform: rotate(-2.5deg); }
+.photo-rotate-4 { transform: rotate(3.5deg) translateY(8px); }
+
+/* Crucial CSS Rule: Small, manageable, natural photography sizing */
+.scrapbook-photo-img {
+  width: auto;
+  max-width: 195px;
+  max-height: 215px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  background-color: #FAF5EE;
+  border: 1px solid rgba(27, 37, 51, 0.12);
+}
+
+.scrapbook-action-btn {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  border: 1.5px solid #1B2533;
+}
+
+.scrapbook-action-btn.primary {
+  background-color: #385273;
+  color: #FFFFFF;
+  box-shadow: 3px 3px 0px #1B2533;
+}
+
+.scrapbook-action-btn.primary:hover {
+  background-color: #273C55;
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #1B2533;
+}
+
+.scrapbook-action-btn.secondary {
+  background-color: #FCFBF7;
+  color: #1B2533;
+  box-shadow: 3px 3px 0px #1B2533;
+}
+
+.scrapbook-action-btn.secondary:hover {
+  background-color: #FFFFFF;
+  transform: translate(-1px, -1px);
+}
+
+/* ==========================================================================
+   RESPONSIVENESS (Tablet & Mobile)
+   ========================================================================== */
+@media (max-width: 900px) {
+  .scrapbook-hero-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .scrapbook-hero-left {
+    align-items: center;
+  }
+
+  .scrapbook-note-card {
+    text-align: left;
+  }
+
+  .scrapbook-myself-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .scrapbook-myself-left {
+    align-items: center;
+  }
+
+  .scrapbook-quote-banner {
+    text-align: left;
+  }
+
+  .scrapbook-filmstrip-cluster {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+
+  .scrapbook-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .scrapbook-page-wrapper {
+    padding: 1.5rem 1rem 3.5rem;
+    gap: 3rem;
+  }
+
+  .scrapbook-art-img {
+    max-width: 145px;
+    max-height: 175px;
+    height: auto;
+  }
+
+  .scrapbook-photo-img {
+    max-width: 140px;
+    max-height: 165px;
+    height: auto;
+  }
+
+  .scrapbook-filmstrip-img {
+    max-width: 90px;
+    max-height: 125px;
+    height: auto;
+  }
+
+  .scatter-art-item,
+  .clothesline-photo-item {
+    padding: 6px 6px 12px 6px;
+  }
+
+  .scrapbook-action-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

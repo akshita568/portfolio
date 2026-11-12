@@ -1,14 +1,29 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
+  const location = useLocation();
+
   return (
-    <nav className="navbar">
-      <ul className="nav-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About Me</Link></li>
-        <li><Link to="/projects">Projects</Link></li>
-        <li><a href="/resume">Resume</a></li>
-      </ul>
-    </nav>
+    <header className="navbar-container">
+      <nav className="navbar">
+        <Link to="/" className="navbar-brand">
+          <span>AKSHITA</span>
+          <span className="brand-badge">PORTFOLIO</span>
+        </Link>
+        
+        <ul className="nav-links">
+          <li><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>
+          <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link></li>
+          <li><Link to="/projects" className={location.pathname === '/projects' ? 'active' : ''}>Projects</Link></li>
+          <li><Link to="/resume" className={location.pathname === '/resume' ? 'active' : ''}>Resume</Link></li>
+        </ul>
+
+        <div className="navbar-quick-links">
+          <a href="/resume/Akshita_Resume.pdf" download="Akshita_Resume.pdf" className="nav-pill-btn nav-resume-download" title="Download Resume PDF">
+            RESUME &darr;
+          </a>
+        </div>
+      </nav>
+    </header>
   );
 }

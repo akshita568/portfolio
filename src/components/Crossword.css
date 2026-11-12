@@ -1,0 +1,280 @@
+
+.crossword-section-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.crossword-scrapbook-card {
+  background-color: #FCFBF7;
+  border: 2px solid #1B2533;
+  border-radius: 12px;
+  box-shadow: 5px 5px 0px #1B2533;
+  padding: 3rem 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+  position: relative;
+  overflow: visible;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.crossword-scrapbook-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 7px 7px 0px #1B2533;
+}
+
+/* Sidebar with Vertical Title */
+.crossword-sidebar {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-shrink: 0;
+}
+
+.crossword-vertical-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.5rem;
+  color: #385273;
+  opacity: 0.6;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 6px;
+  line-height: 1;
+}
+
+.crossword-vertical-line {
+  width: 2px;
+  height: 270px;
+  background-color: #385273;
+  position: relative;
+}
+
+.crossword-vertical-line::before,
+.crossword-vertical-line::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: #385273;
+  left: -4px;
+}
+
+.crossword-vertical-line::before { top: 0; }
+.crossword-vertical-line::after { bottom: 0; }
+
+/* Middle: Cutout Portrait (Black & White, Enlarged, Shifted Left) */
+.crossword-middle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 330px;
+  margin-left: -24px;
+  flex-shrink: 0;
+}
+
+.crossword-cutout-img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 5;
+  filter: grayscale(100%) contrast(108%) drop-shadow(4px 6px 14px rgba(27, 37, 51, 0.22));
+  transform: translateX(-12px);
+}
+
+/* Crossword Container & Annotations */
+.crossword-graphic-container {
+  position: relative;
+  padding: 30px 45px;
+}
+
+.crossword-anno {
+  position: absolute;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.45rem;
+  color: #385273;
+  font-weight: 700;
+  z-index: 10;
+  display: flex;
+  white-space: nowrap;
+}
+
+.crossword-anno-akshita {
+  top: -38px;
+  right: 10px;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 1.6rem;
+  color: #385273;
+}
+
+.crossword-arrow-1 {
+  width: 42px;
+  height: 42px;
+  margin-top: -2px;
+  stroke: #385273;
+  stroke-width: 2.5;
+  fill: none;
+}
+
+.crossword-anno-artist {
+  top: 32%;
+  left: -160px;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.55rem;
+  color: #D99B26;
+}
+
+.crossword-arrow-2 {
+  width: 65px;
+  height: 38px;
+  transform: rotate(10deg);
+  stroke: #D99B26;
+  stroke-width: 2.5;
+  fill: none;
+}
+
+/* The 7x6 Letter Grid */
+.crossword-letter-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 16px 22px;
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(2.2rem, 3.2vw, 3.2rem);
+  font-weight: 700;
+  text-align: center;
+  text-transform: lowercase;
+  color: #1B2533;
+  position: relative;
+}
+
+.crossword-letter-grid span {
+  position: relative;
+  z-index: 2;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+/* Authentic Hand-Drawn Circles */
+.crossword-circle-highlight {
+  position: absolute;
+  border: 3px solid #385273;
+  border-radius: 50% / 32%;
+  z-index: 1;
+  box-shadow: 2px 2px 0px rgba(56, 82, 115, 0.15);
+  background-color: rgba(56, 82, 115, 0.08);
+}
+
+.circle-row-akshita {
+  top: 1%;
+  left: -3%;
+  width: 106%;
+  height: 18%;
+  transform: rotate(-1.5deg);
+}
+
+.circle-row-artist {
+  top: 34%;
+  left: -2%;
+  width: 88%;
+  height: 18%;
+  transform: rotate(1.2deg);
+  border-color: #D99B26;
+  background-color: rgba(217, 155, 38, 0.12);
+  box-shadow: 2px 2px 0px rgba(217, 155, 38, 0.2);
+}
+
+.circle-row-coder {
+  top: 67%;
+  left: 12%;
+  width: 74%;
+  height: 18%;
+  transform: rotate(-2deg);
+  border-color: #385273;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .crossword-scrapbook-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    gap: 2.5rem;
+  }
+
+  .crossword-sidebar {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .crossword-vertical-title {
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 2.5rem;
+  }
+
+  .crossword-vertical-line {
+    width: 120px;
+    height: 2px;
+  }
+
+  .crossword-vertical-line::before,
+  .crossword-vertical-line::after {
+    width: 2px;
+    height: 10px;
+    top: -4px;
+    left: auto;
+  }
+  .crossword-vertical-line::before { left: 0; }
+  .crossword-vertical-line::after { right: 0; }
+
+  .crossword-middle {
+    width: 220px;
+  }
+
+  .crossword-anno-artist {
+    left: -20px;
+    top: -25px;
+  }
+}
+
+@media (max-width: 680px) {
+  .crossword-letter-grid {
+    font-size: 1.8rem;
+    gap: 10px 14px;
+  }
+
+  .crossword-graphic-container {
+    padding: 15px 10px;
+  }
+
+  .crossword-anno {
+    display: none;
+  }
+}
+
+@media (max-width: 440px) {
+  .crossword-letter-grid {
+    font-size: 1.45rem;
+    gap: 8px 10px;
+  }
+
+  .crossword-middle {
+    width: 180px;
+    margin-left: 0;
+  }
+
+  .crossword-cutout-img {
+    transform: none;
+  }
+
+  .crossword-scrapbook-card {
+    padding: 1.8rem 1rem;
+    gap: 1.5rem;
+  }
+}
