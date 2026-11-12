@@ -1,16 +1,8 @@
 import { Link } from 'react-router-dom';
 import './Home.css';
 
-/**
- * Modern Bento Box Homepage Component
- * Inspired by structured editorial magazine layout:
- * - Slate/Denim Blue (#385273)
- * - Warm Beige/Cream background (#F4F0EB)
- * - High-contrast Dark Navy text (#1B2533)
- * - Preserves 100% of user content (Bio, 400+ DSA, Skills, Tools, Links, Certificate, Art)
- */
 export default function Home() {
-  // All current skill & language data preserved
+
   const languages = [
     { name: 'C++', percentage: 90, level: 'Advanced' },
     { name: 'Python', percentage: 85, level: 'Advanced' },
@@ -40,7 +32,6 @@ export default function Home() {
     'Postman',
   ];
 
-  // All current social links preserved
   const socialLinks = [
     {
       platform: 'GitHub',
@@ -83,9 +74,6 @@ export default function Home() {
   return (
     <div className="bento-container">
       
-      {/* =================================================================
-          1. TOP BANNER CARD: EDITORIAL MASTHEAD
-          ================================================================= */}
       <section className="bento-card bento-header-card">
         <div className="bento-header-top">
           <div className="bento-eyebrow-tag">
@@ -113,17 +101,13 @@ export default function Home() {
             AKSHITA <span>SHARMA</span>
           </h1>
           <p className="bento-header-tagline">
-            Software engineer, algorithmic problem solver, and visual artist building full-stack applications with AI-powered features and thoughtful digital craftsmanship.
+            Software developer and algorithmic problem solver passionate about building full-stack applications, exploring new technologies, and creating thoughtful digital experiences through clean code and creative problem-solving.
           </p>
         </div>
       </section>
 
-      {/* =================================================================
-          2. HERO BENTO SECTION: INTRO CARD + PORTRAIT CARD
-          ================================================================= */}
       <section className="bento-hero-grid">
-        
-        {/* Left Column: Blue Hero Intro Card */}
+
         <div className="bento-card bento-intro-card">
           <div className="intro-card-header">
             <div>
@@ -135,12 +119,10 @@ export default function Home() {
             <span className="intro-pronoun-pill">she / her</span>
           </div>
 
-          {/* Restored Hero Paragraph */}
           <p className="intro-body-bio">
             I am a pre-final year Computer Science student at <strong>NIT Hamirpur</strong>. I specialize in building end-to-end full-stack systems with <strong>C++, Python, JavaScript, React, FastAPI</strong>, and modern databases, bridging algorithmic performance with creative visual expression.
           </p>
 
-          {/* Key Bullet Points */}
           <ul className="intro-key-points-list">
             <li className="intro-key-point-item">
               Pre-final year student at <strong>NIT Hamirpur</strong> (Computer Science &amp; Engineering).
@@ -156,32 +138,30 @@ export default function Home() {
             </li>
           </ul>
 
-          {/* High-Impact Stat Metrics Quad */}
           <div className="intro-stats-quad">
             <div className="intro-stat-cell">
               <span className="intro-stat-number">400+</span>
               <span className="intro-stat-label">DSA Problems Solved</span>
             </div>
             <div className="intro-stat-cell">
-              <span className="intro-stat-number">NIT '26</span>
+              <span className="intro-stat-number">NITH '28</span>
               <span className="intro-stat-label">Hamirpur CSE</span>
             </div>
             <div className="intro-stat-cell">
               <span className="intro-stat-number">GWC 7.0</span>
-              <span className="intro-stat-label">Flipkart Scholar</span>
+              <span className="intro-stat-label">Flipkart</span>
             </div>
             <div className="intro-stat-cell">
               <span className="intro-stat-number">Artist</span>
-              <span className="intro-stat-label">Sold Art Worldwide</span>
+              <span className="intro-stat-label">Sold Many Artworks</span>
             </div>
           </div>
         </div>
 
-        {/* Right Column: Hero Portrait Card */}
         <div className="bento-card bento-portrait-card">
           <div className="portrait-image-wrapper">
             <img 
-              src="/photos/me3.jpeg" 
+              src="/photos/me3.webp" 
               alt="Akshita Sharma" 
               className="portrait-photo"
               loading="eager"
@@ -196,10 +176,6 @@ export default function Home() {
 
       </section>
 
-        {/* =================================================================
-            3. "CONTENT NICHES" TECH DOMAINS & SKILLS SECTION
-            (Structured directly after the reference image "Content Niches")
-            ================================================================= */}
         <section className="bento-card bento-niches-section">
           
           <div className="niches-header-row">
@@ -215,10 +191,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 3-Card Grid for Languages, Frameworks, Tools */}
           <div className="niches-grid">
             
-            {/* 1. Languages Card */}
             <div className="niche-category-card">
               <div className="niche-pill-header accent-blue">
                 LANGUAGES
@@ -242,7 +216,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 2. Frameworks & Libraries Card */}
             <div className="niche-category-card">
               <div className="niche-pill-header">
                 FRAMEWORKS & LIBS
@@ -258,7 +231,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 3. Developer Tools Card */}
             <div className="niche-category-card">
               <div className="niche-pill-header accent-gold">
                 TOOLS & ENVIRONMENTS
@@ -276,10 +248,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* =================================================================
-            4. "REAL RESULTS": PROBLEM SOLVING & CERTIFICATIONS
-            (Structured after reference "Real Results Created with Purpose")
-            ================================================================= */}
+        
         <section className="bento-card bento-results-section">
           
           <div className="results-header-container">
@@ -292,7 +261,6 @@ export default function Home() {
 
           <div className="results-two-col-grid">
             
-            {/* Left: Problem Solving & DSA Card */}
             <div className="results-sub-card">
               <div>
                 <div className="results-card-title-row">
@@ -323,12 +291,10 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: Flipkart GWC 7.0 Certificate */}
             <div className="results-sub-card">
               <div>
                 <div className="results-card-title-row">
                   <h3 className="results-card-title">HONORS & CERTIFICATES</h3>
-                  <span className="results-badge">SCHOLARSHIP</span>
                 </div>
 
                 <div className="certificate-preview-box" style={{ marginTop: '1rem' }}>
@@ -336,10 +302,10 @@ export default function Home() {
                     Flipkart GWC 7.0 Certificate
                   </span>
                   <span className="certificate-org">
-                    Flipkart Girls Wanna Code 7.0 &middot; Recognized Scholar
+                    Flipkart Girls Wanna Code 7.0 &middot;
                   </span>
                   <p style={{ fontSize: '0.85rem', color: '#4A5568', margin: '4px 0 0', lineHeight: '1.4' }}>
-                    Competitive coding, problem solving, and software engineering development curriculum curated by Flipkart engineering leaders.
+                    Selected among the Top 200 scholars in Flipkart Girls Wanna Code 7.0 program, competing with 28,000+ registrations.
                   </p>
                 </div>
               </div>
@@ -359,16 +325,12 @@ export default function Home() {
 
         </section>
 
-        {/* =================================================================
-            5. DUAL CRAFT: CREATIVE STUDIO & ARTIST SPOTLIGHT
-            ================================================================= */}
         <section className="bento-card artist-spotlight-card">
           <div className="artist-spotlight-grid grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             
-            {/* Left: Artwork Showcase Image Placeholder */}
             <div className="artist-artwork-frame w-full overflow-hidden rounded-lg">
               <img 
-                src="/art/art1.png" 
+                src="/art/art1.webp" 
                 alt="Original Artwork by Akshita Sharma" 
                 className="artist-artwork-img w-full h-auto object-cover rounded-lg"
                 loading="lazy"
@@ -376,7 +338,6 @@ export default function Home() {
               />
             </div>
 
-            {/* Right: Studio Narrative & Action Buttons */}
             <div className="artist-spotlight-content flex flex-col justify-between">
               <div>
                 <span className="bento-eyebrow-tag" style={{ backgroundColor: 'rgba(255,255,255,0.15)', color: '#FFFFFF', borderColor: 'rgba(255,255,255,0.3)', marginBottom: '0.6rem' }}>
@@ -386,7 +347,7 @@ export default function Home() {
                   WHERE ENGINEERING MEETS <span>VISUAL ART</span>
                 </h2>
                 <p className="artist-desc" style={{ marginTop: '0.8rem' }}>
-                  Beyond full-stack architecture and algorithmic problem solving, I run an independent creative studio specializing in traditional painting and visual aesthetics. Having sold original artworks and custom commissions to collectors worldwide, I bring that same patient craftsmanship and intentional design to every software system I build.
+                  I enjoy exploring art and creativity alongside software development. I run my own art studio, where I create and sell hand-painted artworks and take up custom commissions. Painting has always been a way for me to experiment, pay attention to details, and express ideas creatively, something I also bring into the things I build.
                 </p>
               </div>
 
@@ -408,9 +369,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* =================================================================
-            6. FEATURED PROJECT HIGHLIGHTS PREVIEW
-            ================================================================= */}
         <section className="bento-card bento-card-beige" style={{ padding: '2rem' }}>
           <div className="niches-header-row" style={{ marginBottom: '1.5rem' }}>
             <div>
@@ -479,10 +437,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* =================================================================
-            7. DEDICATED "CONNECT" GRID CARD
-            (Replaces scattered social cards with sleek, aligned Bento grid)
-            ================================================================= */}
         <section className="bento-card bento-connect-card">
           <div className="connect-header">
             <div>
@@ -497,7 +451,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Responsive CSS Grid: 1 col on mobile, 2 on tablet, 3 on desktop */}
           <div className="connect-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {socialLinks.map((link) => (
               <a 

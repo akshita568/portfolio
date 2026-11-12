@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
@@ -7,30 +6,26 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Editorial Slate / Denim Blues from reference
         primary: {
-          DEFAULT: '#385273', // Main card & heading blue
-          dark: '#273C55',    // High-contrast deep blue
-          light: '#4A6B99',   // Midtone slate blue
-          soft: '#E3ECF6',    // Subtle blue tint for chips
-          border: '#B3C7DC',  // Border blue
+          DEFAULT: '#385273',
+          dark: '#273C55',
+          light: '#4A6B99',
+          soft: '#E3ECF6',
+          border: '#B3C7DC',
         },
-        // Warm Pastel Cream / Sand / Beige palette
         beige: {
-          light: '#FCFBF7',   // Clean warm off-white card
-          DEFAULT: '#F6F4EE', // Soothing global pastel cream canvas
-          warm: '#EFECE3',    // Inset container warm beige
-          deep: '#DDD6C8',    // Borders and subtle dividers
+          light: '#FCFBF7',
+          DEFAULT: '#F6F4EE',
+          warm: '#EFECE3',
+          deep: '#DDD6C8',
         },
-        // High-contrast editorial typography
         dark: {
-          DEFAULT: '#1B2533', // Deep navy charcoal for primary text
-          muted: '#4A5568',   // Secondary text
-          subtle: '#718096',  // Meta captions
+          DEFAULT: '#1B2533',
+          muted: '#4A5568',
+          subtle: '#718096',
         },
-        // Accents
         accent: {
-          gold: '#D99B26',    // Warm gold/amber accent from reference
+          gold: '#D99B26',
           goldLight: '#FBEED0',
         }
       },

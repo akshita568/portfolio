@@ -13,10 +13,7 @@ export default function App() {
       <Navbar />
       <main>
         <Routes>
-          {/* Home Page Route */}
           <Route path="/" element={<Home />} />
-          
-          {/* Dedicated About Page Route */}
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/resume" element={<Resume />} />

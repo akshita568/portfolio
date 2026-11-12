@@ -8,36 +8,36 @@ export default function Projects() {
       title: "CompactIQ – Enterprise Compliance Engine",
       shortDesc: "A desktop-based enterprise compliance engine built with FastAPI, React, Electron, and SQLite.",
       fullDesc: "Built a desktop-based enterprise compliance engine with a FastAPI backend, React/Electron frontend, and SQLite persistence. Integrated Google Gemini to extract dependency and compatibility rules from vendor documentation and store them in a searchable knowledge base. Developed automated endpoint scanning and compatibility visualization to identify compliance issues across application dependencies.",
-      image: "/projects/compactIQ.png",
+      image: "/projects/compactIQ.webp",
       github: "https://github.com/akshita568/compactIQ"
     },
     {
       title: "Silent Strokes",
       shortDesc: "A full-stack art portfolio and studio management platform using React and Firebase.",
       fullDesc: "Built a full-stack art portfolio and studio management platform using React, Vite, Firebase Authentication, and Cloud Firestore. Implemented protected admin routes and real-time commission management using Firebase Authentication and Firestore. Designed a responsive interface with interactive galleries and storytelling-driven user experience using Tailwind CSS.",
-      image: "/art/art1.png",
+      image: "/art/art1.webp",
       github: "https://github.com/akshita568/silentStrokes"
     },
     {
       title: "Network Security Threat Detection Platform",
       shortDesc: "An end-to-end phishing URL detection pipeline covering MongoDB and Scikit-Learn.",
       fullDesc: "Developed an end-to-end phishing URL detection pipeline covering MongoDB ingestion, preprocessing and model training. Built reusable configuration, logging, exception handling, and data ingestion modules to improve pipeline reliability and maintainability. Containerized the ML workflow using Docker for seamless deployment.",
-      image: "/projects/networksec.png",
+      image: "/projects/networksec.webp",
       github: "https://github.com/akshita568/network_security_threat_detection"
     },
     {
-      title: "Personal Developer & Art Portfolio",
+      title: "This Portfolio Actually",
       shortDesc: "A dual-identity portfolio blending modern Bento Box architecture with a vintage scrapbook aesthetic.",
       fullDesc: "Architected a high-performance personal portfolio uniting engineering problem-solving with artistic expression. Features an editorial Bento Box dashboard for technical skills, interactive DSA metrics, and a tactile free-flowing scrapbook gallery for fine art and travel photography. Built with React 19, Vite, Tailwind CSS, and custom responsive CSS grid modules.",
-      image: "/art/art2.png",
+      image: "/projects/portfolio.webp",
       github: "https://github.com/akshita568/portfolio"
     },
     {
-      title: "Compiler Optimization Lab",
-      shortDesc: "Low-level code analysis and AST optimization passes implemented in C++ for intermediate representations.",
-      fullDesc: "Implemented low-level compiler optimization passes and control-flow graph (CFG) analysis in C++. Built algorithms for dead code elimination, constant propagation/folding, common subexpression elimination (CSE), and register allocation. Conducted instruction profiling to measure speedup and memory efficiency on benchmark program suites.",
-      image: "/projects/compactIQ.png",
-      github: "https://github.com/akshita568/compiler-optimization-lab"
+      title: "Compiler Optimization",
+      shortDesc: "Developed a custom C++ compiler optimization engine utilizing Control-Flow Graph (CFG) analysis to significantly reduce memory overhead and accelerate runtime performance.",
+      fullDesc: "Engineered low-level algorithmic passes—including dead code elimination, constant folding, and common subexpression elimination (CSE)—to strip inefficiencies at the instruction level. Designed a custom register allocation system and conducted rigorous instruction profiling on benchmark suites to mathematically validate execution speedups and memory optimizations.",
+      image: "/projects/compiler.webp",
+      github: "https://github.com/Jadedinfate/Compiler_optimisation"
     }
   ];
 

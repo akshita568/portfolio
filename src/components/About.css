@@ -19,7 +19,6 @@
   overflow-x: hidden;
 }
 
-/* Washi Tape Accent */
 .washi-tape {
   position: absolute;
   height: 20px;
@@ -48,7 +47,6 @@
   transform: rotate(15deg);
 }
 
-/* Magazine Cutout Header Pills */
 .scrapbook-cutout {
   background-color: #1B2533;
   color: #FCFBF7;
@@ -66,7 +64,6 @@
 .cutout-tilt-left { transform: rotate(-2.5deg); }
 .cutout-tilt-right { transform: rotate(2deg); }
 
-/* Playful Script Accent */
 .scrapbook-script {
   font-family: 'Shadows Into Light', cursive;
   color: #385273;
@@ -74,7 +71,6 @@
   font-weight: 700;
 }
 
-/* 10-Point Star Badge */
 .scrapbook-star {
   width: 50px;
   height: 50px;
@@ -85,9 +81,6 @@
   filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.15));
 }
 
-/* ==========================================================================
-   1. HERO SCRAPBOOK SECTION ("MEET THE ARTIST")
-   ========================================================================== */
 .scrapbook-hero-section {
   display: flex;
   align-items: center;
@@ -149,7 +142,6 @@
   width: fit-content;
 }
 
-/* Free-floating stationery text note */
 .scrapbook-note-card {
   background-color: #FCFBF7;
   border: 1.5px solid #1B2533;
@@ -169,7 +161,6 @@
   margin: 0;
 }
 
-/* Hero Right Cutout Portrait */
 .scrapbook-hero-right {
   flex: 0.9;
   position: relative;
@@ -214,9 +205,6 @@
   border-radius: 4px;
 }
 
-/* ==========================================================================
-   2. "ABOUT MYSELF" & VERTICAL PHOTO STRIPS
-   ========================================================================== */
 .scrapbook-myself-section {
   display: flex;
   align-items: center;
@@ -233,7 +221,6 @@
   position: relative;
 }
 
-/* Overlapping script title */
 .scrapbook-script-overlay {
   font-family: 'Shadows Into Light', cursive;
   font-size: clamp(2.8rem, 5vw, 4.2rem);
@@ -263,7 +250,6 @@
   border-radius: 4px;
 }
 
-/* Passion stickers & badges (Taped note cards) */
 .scrapbook-passions-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -312,8 +298,6 @@
   line-height: 1.45;
 }
 
-
-/* Photo Booth Filmstrips: Vertical Stack Visually Matching Adjacent Bio Text */
 .scrapbook-filmstrip-cluster {
   flex: 0.85;
   display: flex;
@@ -346,7 +330,6 @@
 .filmstrip-photo-item:nth-child(2) { transform: rotate(2.5deg) translateX(10px); }
 .filmstrip-photo-item:nth-child(3) { transform: rotate(-2deg); }
 
-/* Crucial CSS Rule: Natural scaling, original smaller dimensions */
 .scrapbook-filmstrip-img {
   width: auto;
   max-width: 125px;
@@ -358,9 +341,6 @@
   border: 1px solid rgba(27, 37, 51, 0.1);
 }
 
-/* ==========================================================================
-   3. "WELCOME TO MY ART GALLERY" (Scattered Tabletop Cluster)
-   ========================================================================== */
 .scrapbook-gallery-section {
   display: flex;
   flex-direction: column;
@@ -395,7 +375,6 @@
   gap: 1.2rem;
 }
 
-/* Scattered Art Cluster (Tossed on a Desk) */
 .scrapbook-scatter-cluster {
   display: flex;
   flex-wrap: wrap;
@@ -424,13 +403,11 @@
   box-shadow: 8px 12px 22px rgba(27, 37, 51, 0.22);
 }
 
-/* Natural individual random rotations */
 .art-rotate-1 { transform: rotate(-3.5deg); }
 .art-rotate-2 { transform: rotate(3deg) translateY(12px); }
 .art-rotate-3 { transform: rotate(-2deg) translateY(-8px); }
 .art-rotate-4 { transform: rotate(4deg); }
 
-/* Crucial CSS Rule: Small, manageable, natural dimensions */
 .scrapbook-art-img {
   width: auto;
   max-width: 210px;
@@ -442,9 +419,6 @@
   border: 1px solid rgba(27, 37, 51, 0.12);
 }
 
-/* ==========================================================================
-   4. "THROUGH THE LENS" PHOTOGRAPHY (Hanging Clothesline Style)
-   ========================================================================== */
 .scrapbook-photography-section {
   display: flex;
   flex-direction: column;
@@ -459,7 +433,6 @@
   padding: 1rem 0;
 }
 
-/* The Hanging Clothesline String */
 .clothesline-rope {
   width: 100%;
   height: 2px;
@@ -497,7 +470,6 @@
   box-shadow: 6px 10px 20px rgba(27, 37, 51, 0.22);
 }
 
-/* Little clothesline clip / binder clip on top */
 .clothesline-clip {
   position: absolute;
   top: -12px;
@@ -526,7 +498,6 @@
 .photo-rotate-3 { transform: rotate(-2.5deg); }
 .photo-rotate-4 { transform: rotate(3.5deg) translateY(8px); }
 
-/* Crucial CSS Rule: Small, manageable, natural photography sizing */
 .scrapbook-photo-img {
   width: auto;
   max-width: 195px;
@@ -575,9 +546,6 @@
   transform: translate(-1px, -1px);
 }
 
-/* ==========================================================================
-   RESPONSIVENESS (Tablet & Mobile)
-   ========================================================================== */
 @media (max-width: 900px) {
   .scrapbook-hero-section {
     flex-direction: column;

@@ -1,3 +1,5 @@
+/* App.css */
+
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Shadows+Into+Light&family=Space+Mono:wght@400;700&display=swap');
 
 :root {
@@ -16,7 +18,7 @@
   --border-color: rgba(27, 37, 51, 0.14);
   --border-strong: #1B2533;
 
-  /* Typography */
+  
   --font-display: 'Bebas Neue', sans-serif;
   --font-serif: 'Libre Baskerville', serif;
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -59,7 +61,6 @@ html, body {
   flex-direction: column;
 }
 
-/* Global Utilities */
 .magazine-cutout {
   background: var(--text-dark);
   color: var(--text-light);
@@ -92,7 +93,6 @@ html, body {
   z-index: 10;
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -224,7 +224,6 @@ html, body {
   }
 }
 
-/* Projects Page Layout & Aesthetic Alignment */
 .projects-page-section {
   padding: 3rem 5% 5rem;
   min-height: 80vh;
@@ -368,7 +367,6 @@ html, body {
   box-shadow: 3px 3px 0px #1B2533;
 }
 
-/* Resume Page Layout & Alignment */
 .resume-page-section {
   padding: 3.5rem 5% 5rem;
   min-height: 85vh;
@@ -469,7 +467,6 @@ html, body {
   background: var(--primary-blue-dark);
 }
 
-/* Footer */
 .site-footer {
   width: 100%;
   background: var(--primary-blue-dark);
@@ -514,7 +511,6 @@ html, body {
   border-color: #FFFFFF;
 }
 
-/* Global Responsive Adjustments */
 @media (max-width: 768px) {
   .serif-solid {
     font-size: 2.8rem !important;
@@ -558,4 +554,3 @@ html, body {
     height: 160px;
   }
 }
-
