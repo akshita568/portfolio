@@ -6,36 +6,38 @@ export default function Projects() {
   const projectList = [
     {
       title: "CompactIQ – Enterprise Compliance Engine",
-      shortDesc: "A desktop-based enterprise compliance engine built with FastAPI, React, Electron, and SQLite.",
-      fullDesc: "Built a desktop-based enterprise compliance engine with a FastAPI backend, React/Electron frontend, and SQLite persistence. Integrated Google Gemini to extract dependency and compatibility rules from vendor documentation and store them in a searchable knowledge base. Developed automated endpoint scanning and compatibility visualization to identify compliance issues across application dependencies.",
+      shortDesc: "An AI-powered hardware compatibility and compliance platform that helps identify potential conflicts between hardware components, BIOS versions, drivers, and system configurations using technical documentation and compatibility rules.",
+      fullDesc: "Developed a full-stack desktop application using React, FastAPI, Electron, and SQLite to analyze hardware configurations and identify potential compatibility issues. Integrated Google's Gemini API to extract dependency and compatibility rules from vendor documentation, enabling automated analysis of hardware, BIOS, and driver requirements. Implemented backend APIs and a compliance engine to evaluate configuration changes against extracted rules and identify potential conflicts. The React frontend supports document uploads and compatibility scans, while Electron provides a desktop interface for comparing configurations and generating reports. SQLite handles local data persistence, bringing the analysis workflow together in a desktop application.",
       image: "/projects/compactIQ.webp",
       github: "https://github.com/akshita568/compactIQ"
     },
     {
       title: "Silent Strokes",
-      shortDesc: "A full-stack art portfolio and studio management platform using React and Firebase.",
-      fullDesc: "Built a full-stack art portfolio and studio management platform using React, Vite, Firebase Authentication, and Cloud Firestore. Implemented protected admin routes and real-time commission management using Firebase Authentication and Firestore. Designed a responsive interface with interactive galleries and storytelling-driven user experience using Tailwind CSS.",
+      shortDesc: "A digital art platform and portfolio for showcasing original artworks, managing commissions, and connecting with people interested in handmade art. Built to bring the artwork and the business behind it together in one place.",
+      fullDesc: "Built using React and JavaScript with a component-based frontend architecture and custom CSS for responsive layouts and interactive UI elements. Integrated Firebase for backend services, data storage, and application functionality. Developed reusable components for artwork presentation and commission-related interactions, with responsive styling to ensure a consistent experience across desktop and mobile devices.",
       image: "/art/art1.webp",
       github: "https://github.com/akshita568/silentStrokes"
     },
+    
     {
       title: "Network Security Threat Detection Platform",
-      shortDesc: "An end-to-end phishing URL detection pipeline covering MongoDB and Scikit-Learn.",
-      fullDesc: "Developed an end-to-end phishing URL detection pipeline covering MongoDB ingestion, preprocessing and model training. Built reusable configuration, logging, exception handling, and data ingestion modules to improve pipeline reliability and maintainability. Containerized the ML workflow using Docker for seamless deployment.",
+      shortDesc: "A machine learning-based security platform that identifies potentially malicious URLs through an automated pipeline for data processing, model training, and prediction.",
+      fullDesc: "Implemented an end-to-end machine learning pipeline using Python, Scikit-learn, Pandas, and NumPy for data processing, feature engineering, and model training. Integrated MongoDB Atlas for data ingestion and storage, with MLflow for experiment tracking and model management. Developed a FastAPI backend to serve model predictions through REST APIs. Containerized the application using Docker and deployed it on AWS EC2, with Amazon ECR for container image management. Configured GitHub Actions for automated CI/CD workflows.",
       image: "/projects/networksec.webp",
       github: "https://github.com/akshita568/network_security_threat_detection"
     },
+
     {
       title: "This Portfolio Actually",
-      shortDesc: "A dual-identity portfolio blending modern Bento Box architecture with a vintage scrapbook aesthetic.",
-      fullDesc: "Architected a high-performance personal portfolio uniting engineering problem-solving with artistic expression. Features an editorial Bento Box dashboard for technical skills, interactive DSA metrics, and a tactile free-flowing scrapbook gallery for fine art and travel photography. Built with React 19, Vite, Tailwind CSS, and custom responsive CSS grid modules.",
+      shortDesc: "A personal portfolio website that brings together my projects, technical experience, and creative interests in one place. It serves as a space to showcase my work, share a little about myself, and document my journey as a developer.",
+      fullDesc: "Developed using React and Vite with a component-based architecture and reusable UI elements. Implemented custom styling using CSS Grid, Flexbox, and responsive design principles to ensure compatibility across different screen sizes. Incorporated custom SVG illustrations, typography, textures, and interactive elements to create a distinctive interface. Deployed on Vercel.",
       image: "/projects/portfolio.webp",
       github: "https://github.com/akshita568/portfolio"
     },
     {
-      title: "Compiler Optimization",
-      shortDesc: "Developed a custom C++ compiler optimization engine utilizing Control-Flow Graph (CFG) analysis to significantly reduce memory overhead and accelerate runtime performance.",
-      fullDesc: "Engineered low-level algorithmic passes—including dead code elimination, constant folding, and common subexpression elimination (CSE)—to strip inefficiencies at the instruction level. Designed a custom register allocation system and conducted rigorous instruction profiling on benchmark suites to mathematically validate execution speedups and memory optimizations.",
+      title: "Code Vulnerability Detection System",
+      shortDesc: "A static code analysis tool that uses machine learning to detect potential security vulnerabilities in C/C++ programs. It evaluates source code, predicts whether it is safe or vulnerable, and highlights suspicious statements that may contribute to security risks.",
+      fullDesc: "Developed a graph-based vulnerability detection system using Python, PyTorch, and PyTorch Geometric (PyG). The system converts C/C++ source code into Code Property Graphs (CPGs), combining Abstract Syntax Trees (AST), Control Flow Graphs (CFG), and Data Flow Graphs (DFG) to capture structural and semantic relationships within the code. Integrated Microsoft's CodeBERT model to generate contextual code embeddings, which are processed by a Relational Gated Graph Neural Network (GGNN) for binary vulnerability classification. Implemented attention-based graph pooling to identify influential code statements and provide explainability through suspicious statement rankings. Joern CLI is used for graph extraction, with a custom AST, CFG, and DFG extraction fallback. The inference pipeline produces safe/vulnerable predictions with confidence scores, while model training uses PyTorch, AdamW optimization, focal loss, and evaluation metrics including precision, recall, F1-score, and ROC-AUC.",
       image: "/projects/compiler.webp",
       github: "https://github.com/Jadedinfate/Compiler_optimisation"
     }
